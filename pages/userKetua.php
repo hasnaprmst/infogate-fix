@@ -47,29 +47,14 @@ $thisPage = "Master Data";
     
 </head>
 <body>
- <!-- SIDEBAR -->
- <?php include '../../../assets/inc/sidebaraction.php';?>
+	<!-- SIDEBAR -->
+	<?php include '../assets/inc/sidebar.php';?>
 	<!-- SIDEBAR -->
 
 	<!-- CONTENT -->
 	<section id="content">
 		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link"><b>INFOGATE</b></a>
-			<form action="#">
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<div class="drop_down">
-				<button class="drop_btn"><?php echo $result->nama_lengkap?></button>
-				<div class="drop_down-content">
-					<a href="../profile.php">Edit Profile</a>
-					<a href="../../login/logout.php">Logout</a>
-				</div>
-			</div>
-			
-		</nav>
+		<?php include '../assets/inc/navbar.php';?>
 		<!-- NAVBAR -->
 
         <!-- MAIN -->
@@ -143,91 +128,89 @@ $thisPage = "Master Data";
 			</ul>
 			<div class="table-data">
 				<div style="width: 100%;">
-						<table id="example" class="table table-striped " style="width:100%">
-							<thead style="text-align:center;">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama Lengkap</th>
-                                    <th>Status</th>
-                                    <th>Username</th>
-                                    <th>Inisial</th>
-                                    <th>Action</th>
-                                </tr>
-							</thead>
-							<tbody>
-                                <?php
-                                $query = "SELECT * FROM `user` WHERE role='ketua' OR role='atasan'";
-                                $result = $db->query($query);
-                                $no = 0;
+					<table id="example" class="table table-striped " style="width:100%">
+						<thead style="text-align:center;">
+							<tr>
+								<th>No</th>
+								<th>Nama Lengkap</th>
+								<th>Status</th>
+								<th>Username</th>
+								<th>Inisial</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$query = "SELECT * FROM `user` WHERE role='ketua' OR role='atasan'";
+							$result = $db->query($query);
+							$no = 0;
 
-                                while ($row = $result->fetch_assoc()) {
-                                    $no++;
-                                ?>
-                                    <tr>
-                                        <td><?php echo $no; ?></td>
-                                        <td><?php echo $row['nama_lengkap']; ?></td>
-                                        <td><?php echo $row['role']; ?></td>
-                                        <td><?php echo $row['username']; ?></td>
-                                        <td><?php echo $row['initial_name']; ?></td>
-                                        <td>
-										<a href="" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id']; ?>"><i class='bx bxs-edit' ></i></a>
-                                            <a href="delUser.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm"><i class='bx bxs-trash' ></i></a>
+							while ($row = $result->fetch_assoc()) {
+								$no++;
+							?>
+								<tr>
+									<td><?php echo $no; ?></td>
+									<td><?php echo $row['nama_lengkap']; ?></td>
+									<td><?php echo $row['role']; ?></td>
+									<td><?php echo $row['username']; ?></td>
+									<td><?php echo $row['initial_name']; ?></td>
+									<td>
+									<a href="" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id']; ?>"><i class='bx bxs-edit' ></i></a>
+										<a href="delUser.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm"><i class='bx bxs-trash' ></i></a>
 
-											<!-- Edit Modal -->
-											<div class="modal fade bd-example-modal-md" id="exampleModal<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-												<div class="modal-dialog modal-md">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
-														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-													</div>
-													<form method="POST" action="editUser.php" enctype="multipart/form-data">
-														<div class="modal-body">
-															<div class="form-row">
-																<div class="col">
-																	<div class="form-group">
-																		<label for="inputnama" class="label-name">Nama Lengkap</label>
-																		<input type="text" class="form-control" name="nama_lengkap" id="inputnama" value="<?php echo $row['nama_lengkap']; ?>">
-																	</div>
-												
-																	<div class="form-group">
-																		<label for="inputrole" class="label-name">Role</label>
-																		<select class="form-select" id="inputrole" name="role">
-																			<option default>Pilih Role</option>
-																			<option <?= ($row['role'] == 'Pegawai') ? 'selected' : '' ?> value="Pegawai">Pegawai</option>
-																			<option <?= ($row['role'] == 'Ketua') ? 'selected' : '' ?> value="Ketua">Ketua</option>
-																			<option <?= ($row['role'] == 'Atasan') ? 'selected' : '' ?> value="Atasan">Atasan</option>
-																		</select>
-																	</div>
+										<!-- Edit Modal -->
+										<div class="modal fade bd-example-modal-md" id="exampleModal<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-md">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<form method="POST" action="editUser.php" enctype="multipart/form-data">
+													<div class="modal-body">
+														<div class="form-row">
+															<div class="col">
+																<div class="form-group">
+																	<label for="inputnama" class="label-name">Nama Lengkap</label>
+																	<input type="text" class="form-control" name="nama_lengkap" id="inputnama" value="<?php echo $row['nama_lengkap']; ?>">
+																</div>
 											
-																	<div class="form-group">
-																		<label for="inputusername" class="label-name">Username</label>
-																		<input type="text" class="form-control" id="inputusername" name="username" readonly value="<?php echo $row['username']; ?>">
-																	</div>
+																<div class="form-group">
+																	<label for="inputrole" class="label-name">Role</label>
+																	<select class="form-select" id="inputrole" name="role">
+																		<option default>Pilih Role</option>
+																		<option <?= ($row['role'] == 'Pegawai') ? 'selected' : '' ?> value="Pegawai">Pegawai</option>
+																		<option <?= ($row['role'] == 'Ketua') ? 'selected' : '' ?> value="Ketua">Ketua</option>
+																		<option <?= ($row['role'] == 'Atasan') ? 'selected' : '' ?> value="Atasan">Atasan</option>
+																	</select>
+																</div>
+										
+																<div class="form-group">
+																	<label for="inputusername" class="label-name">Username</label>
+																	<input type="text" class="form-control" id="inputusername" name="username" readonly value="<?php echo $row['username']; ?>">
 																</div>
 															</div>
 														</div>
-														<div class="modal-footer">
-															<button type="button" class="modal-btn-cancel" data-bs-dismiss="modal">Cancel</button>
-															<button type="submit" class="modal-btn-add" name="submit" value="save">Save</button>
-														</div>
-													</form>
-												</div>
-												</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="modal-btn-cancel" data-bs-dismiss="modal">Cancel</button>
+														<button type="submit" class="modal-btn-add" name="submit" value="save">Save</button>
+													</div>
+												</form>
 											</div>
-                                        </td>
-                                    </tr>
-                                <?php
-                                }
-                                ?>
-							</tbody>
-						</table> 
+											</div>
+										</div>
+									</td>
+								</tr>
+							<?php
+							}
+							?>
+						</tbody>
+					</table> 
 				</div>
 			</div>
-            
-            
+			<?php include '../assets/inc/copyright.php';?>
         </main>	
-		<?php include '../assets/inc/copyright.php';?>
     </section>
 
     <!-- Vendor JS Files -->

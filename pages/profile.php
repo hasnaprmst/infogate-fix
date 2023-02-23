@@ -71,106 +71,107 @@ $thisPage = "Profile";
 				</div>
 
 				<div class="table-data">
-						<div class="boxxx">
-							<h4>&nbsp;&nbsp;Hello, <?=$result->nama_lengkap?>!</h4>
-							<form method="POST" action="action/editProfile.php">
-								<div class="mini-box">
-									<div class="minibox" style="width: 45%;">
-										<label for="inputnama" class="label">Username</label>
-										<input type="text" class="form-control" value="<?= $result->username ?>" disabled>
-									</div>
-									<div class="minibox" style="width: 45%;">
-										<label for="inputrole" class="label">Role</label>
-										<input type="text" class="form-control" value="<?= $result->role ?>" disabled>
-									</div>
-									<div class="minibox" style="width: 45%;">
-										<label for="inputpass" class="label">Password</label>
-										<input type="text" class="form-control" name="password" value="<?= $result->password ?>" disabled>
-									</div>
-									<div class="minibox" style="width: 45%;">
-										<label for="inputgrup" class="label">Grup</label>
-										<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="
-										<?php 
-										if ($result->grup1 == NULL && $result->grup2 == NULL) {
-											echo "";
-										} elseif ($result->grup1 != NULL && $result->grup2 == NULL) {
-											echo $result->grup1;
-										} elseif ($result->grup1 == NULL && $result->grup2 != NULL) {
-											echo $result->grup2;
-										} else {
-											echo $result->grup1 . ", " . $result->grup2;
-										}
-										?>" disabled>
-									</div>
-									<div class="minibox" style="width: 45%;">
-										<label for="inputinisial" class="label">Inisial</label>
-										<input type="text" class="form-control" id="inputinisial" placeholder="Masukan Inisial" style="text-transform: uppercase;" value="<?= $result->initial_name ?>" disabled>
-									</div>
-									<div class="profile-btn">
-										<button type="button" class="modal-btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#editProfile">Edit</button>
+					<div class="boxxx">
+						<h4>&nbsp;&nbsp;Hello, <?=$result->nama_lengkap?>!</h4>
+						<form method="POST" action="action/editProfile.php">
+							<div class="mini-box">
+								<div class="minibox" style="width: 45%;">
+									<label for="inputnama" class="label">Username</label>
+									<input type="text" class="form-control" value="<?= $result->username ?>" disabled>
+								</div>
+								<div class="minibox" style="width: 45%;">
+									<label for="inputrole" class="label">Role</label>
+									<input type="text" class="form-control" value="<?= $result->role ?>" disabled>
+								</div>
+								<div class="minibox" style="width: 45%;">
+									<label for="inputpass" class="label">Password</label>
+									<input type="text" class="form-control" name="password" value="<?= $result->password ?>" disabled>
+								</div>
+								<div class="minibox" style="width: 45%;">
+									<label for="inputgrup" class="label">Grup</label>
+									<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="
+									<?php 
+									if ($result->grup1 == NULL && $result->grup2 == NULL) {
+										echo "";
+									} elseif ($result->grup1 != NULL && $result->grup2 == NULL) {
+										echo $result->grup1;
+									} elseif ($result->grup1 == NULL && $result->grup2 != NULL) {
+										echo $result->grup2;
+									} else {
+										echo $result->grup1 . ", " . $result->grup2;
+									}
+									?>" disabled>
+								</div>
+								<div class="minibox" style="width: 45%;">
+									<label for="inputinisial" class="label">Inisial</label>
+									<input type="text" class="form-control" id="inputinisial" placeholder="Masukan Inisial" style="text-transform: uppercase;" value="<?= $result->initial_name ?>" disabled>
+								</div>
+								<div class="profile-btn">
+									<button type="button" class="modal-btn-add btn-primary" data-bs-toggle="modal" data-bs-target="#editProfile">Edit</button>
 
-										<!-- Edit Modal -->
-										<div class="modal fade" id="editProfile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-										<div class="modal-dialog modal-dialog-centered">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
-													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-												</div>
-												<form method="POST" action="action/editProfile.php">
-													<div class="modal-body">
-														<div class="form-row">
-															<div class="col">
-																<div class="form-group">
-																	<label for="inputnama" class="label-name">Username</label>
-																	<input type="text" class="form-control" name="username" id="inputnama" value="<?= $result->username ?>" disabled>
-																</div>
+									<!-- Edit Modal -->
+									<div class="modal fade" id="editProfile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<form method="POST" action="action/editProfile.php">
+												<div class="modal-body">
+													<div class="form-row">
+														<div class="col">
+															<div class="form-group">
+																<label for="inputnama" class="label-name">Username</label>
+																<input type="text" class="form-control" name="username" id="inputnama" value="<?= $result->username ?>" disabled>
+															</div>
+									
+															<div class="form-group">
+																<label for="inputpass" class="label-name">Password</label>
+																<input type="text" class="form-control" name="password" placeholder="Masukan Password" value="<?= $result->password ?>">
+															</div>
+
+															<div class="form-group">
+																<label for="inputinisial" class="label-name">Inisial</label>
+																<input type="text" class="form-control" name="initial_name" id="inputinisial" placeholder="Masukan Inisial" style="text-transform: uppercase;" value="<?= $result->initial_name ?>">
+															</div>
 										
-																<div class="form-group">
-																	<label for="inputpass" class="label-name">Password</label>
-																	<input type="text" class="form-control" name="password" placeholder="Masukan Password" value="<?= $result->password ?>">
-																</div>
+															<div class="form-group">
+																<label for="inputrole" class="label-name">Role</label>
+																<input type="text" class="form-control" name="role" id="inputrole" value="<?= $result->role ?>" disabled>
+															</div>
 
-																<div class="form-group">
-																	<label for="inputinisial" class="label-name">Inisial</label>
-																	<input type="text" class="form-control" name="initial_name" id="inputinisial" placeholder="Masukan Inisial" style="text-transform: uppercase;" value="<?= $result->initial_name ?>">
-																</div>
-											
-																<div class="form-group">
-																	<label for="inputrole" class="label-name">Role</label>
-																	<input type="text" class="form-control" name="role" id="inputrole" value="<?= $result->role ?>" disabled>
-																</div>
-
-																<div class="form-group">
-																	<label for="inputgrup" class="label-name">Grup</label>
-																	<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="
-																	<?php 
-																	if ($result->grup1 == NULL && $result->grup2 == NULL) {
-																		echo "";
-																	} elseif ($result->grup1 != NULL && $result->grup2 == NULL) {
-																		echo $result->grup1;
-																	} elseif ($result->grup1 == NULL && $result->grup2 != NULL) {
-																		echo $result->grup2;
-																	} else {
-																		echo $result->grup1 . ", " . $result->grup2;
-																	}
-																	?>" disabled>
-																</div>
+															<div class="form-group">
+																<label for="inputgrup" class="label-name">Grup</label>
+																<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="
+																<?php 
+																if ($result->grup1 == NULL && $result->grup2 == NULL) {
+																	echo "";
+																} elseif ($result->grup1 != NULL && $result->grup2 == NULL) {
+																	echo $result->grup1;
+																} elseif ($result->grup1 == NULL && $result->grup2 != NULL) {
+																	echo $result->grup2;
+																} else {
+																	echo $result->grup1 . ", " . $result->grup2;
+																}
+																?>" disabled>
 															</div>
 														</div>
 													</div>
-													<div class="modal-footer">
-														<button type="submit" class="modal-btn-add" name="save" value="save">Save</button>
-													</div>
-												</form>
-											</div>
+												</div>
+												<div class="modal-footer">
+													<button type="submit" class="modal-btn-add" name="save" value="save">Save</button>
+												</div>
+											</form>
 										</div>
 									</div>
 								</div>
-							</form>
-           			</div>	
+							</div>
+						</form>
+           			</div>
+				</div>
+				<?php include '../assets/inc/copyright.php';?>	
 			</main>	
-		<?php include '../assets/inc/copyright.php';?>
 	</section>
 	<!-- Vendor JS Files -->
 	<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

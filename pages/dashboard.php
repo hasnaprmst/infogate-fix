@@ -74,20 +74,20 @@ $thisPage = "Dashboard";
 
 		<!-- MAIN -->
 		<main>
-		<div class="head-title">
-			<div class="left">
-				<center><h1>Dashboard</h1></center>
-				<ul class="breadcrumb">
-					<ul class="asd"></ul>
-				</ul>
+			<div class="head-title">
+				<div class="left">
+					<center><h1>Dashboard</h1></center>
+					<ul class="breadcrumb">
+						<ul class="asd"></ul>
+					</ul>
+				</div>
 			</div>
-		</div>
 
-		<div class="table-data">
-			<div id="calendar"></div>
-			<div style="width: 100%;">
-				<span><h3>Today's Joblist</h3></span>
-				<br>
+			<div class="table-data">
+				<div id="calendar"></div>
+				<div style="width: 100%;">
+					<span><h3>Today's Joblist</h3></span>
+					<br>
 					<table id="example" class="table table-striped " style="width:100%">
 						<thead style="text-align:center;">
 									<tr>
@@ -491,17 +491,16 @@ $thisPage = "Dashboard";
 									<?php } ?>
 								</td>
 							</tr>
-						<?php
-						}
-						?>
-					</tbody>
+							<?php
+							}
+							?>
+						</tbody>
 					</table> 
+				</div>
 			</div>
-		</div>
+			<?php include '../assets/inc/copyright.php';?>
 									
-		</main>	
-		<?php include '../assets/inc/copyright.php';?>	
-			
+		</main>		
 	</section>	
 	<script>
 		$(document).ready(function() {

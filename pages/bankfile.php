@@ -118,46 +118,46 @@ $thisPage = "Bank File";
 			
 			<div class="table-data">
 				<div style="width: 100%;">
-						<table id="example" class="table table-striped " style="width:100%">
-							<thead style="text-align:center;">
-								<tr>
-									<th>NO</th>
-									<th>DOKUMEN</th>
-									<th>FILE</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php
-								$query = "SELECT * FROM bankfile";
-								$result = $db->query($query);
-								$no = 0;
+					<table id="example" class="table table-striped " style="width:100%">
+						<thead style="text-align:center;">
+							<tr>
+								<th>NO</th>
+								<th>DOKUMEN</th>
+								<th>FILE</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$query = "SELECT * FROM bankfile";
+							$result = $db->query($query);
+							$no = 0;
 
-								while ($row = $result->fetch_assoc()) {
-									$no++;
-								?>
-									<tr>
-										<td><?php echo $no; ?></td>
-										<td>
-											<div class="boxfile">
-												<b class="badge bg-secondary text-uppercase"><?php echo $row['jenis_file']; ?></b>
-												<span><?php echo $row['input_by']; ?></span><span> | </span>
-												<span><?php echo $row['time']; ?></span>
-											</div>	
-											<?php echo $row['informasi_file']; ?>
-										</td>
-										<td>
-											<a href="../files/bankfile/<?php echo $row['file_lampiran']; ?>" target="_blank" class="btn btn-info btn-sm"><i class='bx bxs-file-pdf'></i></a>
-										</td>
-									</tr>
-								<?php
-								}
-								?>
-							</tbody>
-						</table> 
+							while ($row = $result->fetch_assoc()) {
+								$no++;
+							?>
+								<tr>
+									<td><?php echo $no; ?></td>
+									<td>
+										<div class="boxfile">
+											<b class="badge bg-secondary text-uppercase"><?php echo $row['jenis_file']; ?></b>
+											<span><?php echo $row['input_by']; ?></span><span> | </span>
+											<span><?php echo $row['time']; ?></span>
+										</div>	
+										<?php echo $row['informasi_file']; ?>
+									</td>
+									<td>
+										<a href="../files/bankfile/<?php echo $row['file_lampiran']; ?>" target="_blank" class="btn btn-info btn-sm"><i class='bx bxs-file-pdf'></i></a>
+									</td>
+								</tr>
+							<?php
+							}
+							?>
+						</tbody>
+					</table> 
 				</div>
 			</div>
+			<?php include '../assets/inc/copyright.php';?>	
 		</main>	
-		<?php include '../assets/inc/copyright.php';?>	
 	</section>
 
 	<!-- Vendor JS Files -->

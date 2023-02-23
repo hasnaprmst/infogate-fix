@@ -97,8 +97,8 @@ $thisPage = "Log History";
 						</table> 
 				</div>
 			</div>
+			<?php include '../assets/inc/copyright.php';?>
 		</main>	
-		<?php include '../assets/inc/copyright.php';?>
 	</section>
 	<!-- Vendor JS Files -->
 	<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

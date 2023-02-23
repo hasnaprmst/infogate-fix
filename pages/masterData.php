@@ -234,7 +234,6 @@ $thisPage = "Master Data";
 											</div>
 											</div>
 										</div>
-										
 									</td>
 								</tr>
 							<?php
@@ -244,10 +243,8 @@ $thisPage = "Master Data";
 					</table> 
 				</div>
 			</div>
-            
-            
+			<?php include '../assets/inc/copyright.php';?>
         </main>	
-		<?php include '../assets/inc/copyright.php';?>
     </section>
 
     <!-- Vendor JS Files -->
