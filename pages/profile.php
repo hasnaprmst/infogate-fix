@@ -169,7 +169,8 @@ $thisPage = "Profile";
 								</div>
 							</form>
            			</div>	
-			</main>
+			</main>	
+		<?php include '../assets/inc/copyright.php';?>
 	</section>
 	<!-- Vendor JS Files -->
 	<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

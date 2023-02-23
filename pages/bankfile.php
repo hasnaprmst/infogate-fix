@@ -157,6 +157,7 @@ $thisPage = "Bank File";
 				</div>
 			</div>
 		</main>	
+		<?php include '../assets/inc/copyright.php';?>	
 	</section>
 
 	<!-- Vendor JS Files -->

@@ -686,6 +686,7 @@ $thisPage = "Joblist";
 				</div>
 			</div>
 		</main>	
+		<?php include '../assets/inc/copyright.php';?>	
 	</section>
 
 	<!-- Vendor JS Files -->

@@ -226,7 +226,8 @@ $thisPage = "Master Data";
 			</div>
             
             
-        </main>
+        </main>	
+		<?php include '../assets/inc/copyright.php';?>
     </section>
 
     <!-- Vendor JS Files -->

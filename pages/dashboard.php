@@ -500,6 +500,7 @@ $thisPage = "Dashboard";
 		</div>
 									
 		</main>	
+		<?php include '../assets/inc/copyright.php';?>	
 			
 	</section>	
 	<script>
