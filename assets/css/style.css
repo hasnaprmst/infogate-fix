@@ -1,6 +1,43 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* Color - Fonts*/
+:root {
+	--poppins: 'Poppins', sans-serif;
+
+	--lightt: #fafafa;
+	--light: #F9F9F9;
+	--blue: #375b7d;
+	--light-blue: #CFE8FF;
+	--bluee: #ccd7e2;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #191a1b;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+	--bg-color-a: #3b39af; /* page header + form label */
+  	--bg-color-b: #404040; /* calendar header */
+ 	--bg-color-c: #d73a3a; /* buttons */
+
+	--body-bg: #e3f2fd;
+	--bg:#303850;
+	--label:#a7a7a7;
+
+	--modal-bg: #FFFFFF;
+	--modal-border-color:#e7e7e7;
+	--modal-title:#13416b;
+
+	--dd-c: #A3C7D6;
+	--wrapper: #a1a1a1;
+	--bg-icons: #f2f2f2;
+	--events:#aabed1;
+	--placeholder: #343249;
+	--border: #ced4da;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +48,10 @@
 /* ------------- GENERAL ------------- */
 body {
   min-height: 100%;
-  background: #e3f2fd;
+  background:var(--body-bg);
 }
 label {
-  color: #a7a7a7;
+  color:var(--label);
   font-size: 15px;
   font-family: poppins;
   font-weight: 450;
@@ -22,19 +59,19 @@ label {
 
 /* ------------- MODAL ------------- */
 .modal-header, .modal-body, .modal-footer {
-  background: #FFFFFF;
+  background: var(--modal-bg);
   border-width: 2px;
-  border-color: #E7E7E7;
+  border-color: var(--modal-border-color);
 }
 .modal-title {
-  color: #13416B;
+  color: var(--);
   font-size: 20px;
   font-family: var(--poppins);
   font-weight: 450;
 }
 .modal-btn-cancel{
-  background: #C9C5C5;
-  color: #fff;
+  background: var(--light);
+  color:white;
   font-size: 15px;
   font-family: var(--poppins);
   font-weight: 450;
@@ -43,8 +80,8 @@ label {
   padding: 8px 15px;
 }
 .modal-btn-add{
-  background: #13416B;
-  color: #fff;
+  background: var(--modal-title);
+  color: white;
   font-size: 15px;
   font-family: var(--poppins);
   font-weight: 450;
@@ -54,8 +91,8 @@ label {
 }
 .btn-add{
 	padding: 10px 20px;
-	color: #ffffff;
-	background-color: #303850;
+	color: white;
+	background-color:var(--bg) ;
 }
 
 /* ------------- PROFILE ------------- */
@@ -86,7 +123,7 @@ label {
 body {
     padding: 0;
     margin: 0;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/backgrounddd.jpg);
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
@@ -95,14 +132,14 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-	background-image: url(../img/background.jpg);
+    background-color: black;
+	background-image: url(../img/backgrounddd.jpg);
 	background-size: cover;
 }
 .box {
     position: absolute;
     width: 400px;
-    background-color: #ffffff;
+    background-color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -111,13 +148,13 @@ body {
 }
 .header{
     font-size: larger;
-    color: #000000; 
+    color: var(--bg); 
 }
 
 .login-area {
     text-align: center;
     padding: 30px 30px 30px 30px;
-    color: #414141;
+    color: var(--bluee);
 }
 input.username{
 	margin: 0;
@@ -135,28 +172,28 @@ input.password{
     outline: none;
     border: none;
     color: white;
-    background-color: #868897;
+    background-color: var(--light-blue);
     margin-bottom: 15px;
     transition: .5s;
 }
 
 .username::placeholder,
 .password::placeholder {
-    color: rgba(255, 255, 255, .7);
+    color: white;
 }
 
 .username:focus,
 .password:focus {
-    background-color: #868897;
+    background-color: gray;
 }
 
 .submit {
     width: 150px;
     padding: 10px;
-    background-color: #37383a;
+    background-color: var(--bg);
     border-radius: 10px;
     font-weight: bold;
-    color:rgb(255, 255, 255);
+    color:var(--bg);
     border: none;
     outline: none;
     margin: 10px;
@@ -165,18 +202,10 @@ input.password{
 }
 
 .submit:hover {
-    background-color: #2c2b2e;
+    background-color: var(--dark);
 }
 
-
-/* ------------- DASHBOARD, PERSONIL ------------- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+/* ------------- DASHBOARD ------------- */
 
 a {
 	text-decoration: none;
@@ -188,8 +217,8 @@ li {
 }
 /* Dropdown Button */
 .dropbtn {
-	background-color:#13416B;
-	color: rgb(255, 255, 255);
+	background-color:var(--modal-title);
+	color: white;
 	padding: 10px 12px;
 	font-size: 16px;
 	border: none;
@@ -199,7 +228,7 @@ li {
   
   /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-	background-color: #adc4d3;
+	background-color: var(--bluee);
 }
   
   /* The container <div> - needed to position the dropdown content */
@@ -212,7 +241,7 @@ li {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #f1f1f1;
+	background-color: var(--dd-c);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
@@ -228,7 +257,7 @@ li {
 }
   
   /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: var(--bluee);}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
@@ -237,7 +266,7 @@ li {
 
 .drop_btn {
 	background-color: var(--blue);
-	color: rgb(255, 255, 255);
+	color: white;
 	padding: 10px;
 	font-size: 15px;
 	border: none;
@@ -251,7 +280,7 @@ li {
 .drop_down-content {
 	display: none;
 	position: absolute;
-	background-color: #A3C7D6;
+	background-color: var(--dd-c);
 	min-width: 150px;
 	box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
 	border-radius: 15px;
@@ -283,13 +312,13 @@ li {
 }
 
 .wrapper{
-	border: 1px solid #a1a1a1;
+	border: 1px solid var(--wrapper);
 	width: 100%;
 	border-radius: 10px;
 }
 
 .wrapper header{
-	border: 1px #a1a1a1;
+	border: 1px var(--wrapper);
 	align-items: center;
 	justify-content:space-between;
 }
@@ -301,7 +330,7 @@ header .icons span{
 	width: 38px;
 	margin: 0 1px;
 	cursor: pointer;
-	color: #000000;
+	color: black;
 	text-align: center;
 	line-height: 38px;
 	font-size: 1.9rem;
@@ -312,18 +341,18 @@ header .icons span{
 	margin-right: -10px;
 }
 header .icons span:hover{
-	background: #f2f2f2;
+	background: var(--bg-icons);
 }
 
 .events{
-	background: #aabed1;
+	background: var(--events);
 	width: 600px;;
 	height: 450px;
 	border-radius: 15px;
 	box-shadow: 0 15px 40px rgba(2, 2, 2, 0.12);
 }
 .title{
-	color: #585858;
+	color: var(--bg-color-b);
 	width: fit-content;
 	height: fit-content;
 	
@@ -335,23 +364,13 @@ button{
 	cursor: pointer;
 	padding: 10px;
 }
-/* td button:nth-child(1){
-	background-color: var(--light-yellow);
-	color: rgb(0, 0, 0);
-	font-family: var(--poppins);
-	
-}
-td button:nth-child(2){
-	background-color: var(--light-orange);
-	color: #000000;
-	font-family: var(--poppins);
-} */
 .searchlist{
 	padding: 10px 20px;
-	color: #F9F9F9;
+	color: white;
 	font-family: var(--poppins);
 	background-color: var(--blue);
 }
+
 input{
 	padding: 10px 20px;
 	margin: 0 10px;
@@ -365,32 +384,12 @@ input{
 tbody td{
 	padding: 10px 20px;
 	text-align: center;
-	color: #000000;
+	color: black;
 } 
 ::placeholder{
-	color: #343249;
+	color: var(--placeholder);
 }
 
-:root {
-	--poppins: 'Poppins', sans-serif;
-
-	--lightt: #fafafa;
-	--light: #F9F9F9;
-	--blue: #375b7d;
-	--light-blue: #CFE8FF;
-	--bluee: #ccd7e2;
-	--grey: #eee;
-	--dark-grey: #AAAAAA;
-	--dark: #191a1b;
-	--red: #DB504A;
-	--yellow: #FFCE26;
-	--light-yellow: #FFF2C6;
-	--orange: #FD7238;
-	--light-orange: #FFE0D3;
-	--bg-color-a: #3b39af; /* page header + form label */
-  	--bg-color-b: #404040; /* calendar header */
- 	--bg-color-c: #d73a3a; /* buttons */
-}
 
 html {
 	overflow-x: hidden;
@@ -845,25 +844,14 @@ ul.box-info{
 	border-radius: 20px;
 	font-weight: 700;
 }
-span.status.completed {
-    background: #6397ba ;
-    border-radius: 8px;
-}
 #content main .table-data .order table tr td {
 	background: var(--blue);
 }
-span.status.open {
-    background: rgb(113, 197, 136);
-    border-radius: 8px;
-}
+
 #content main .table-data .order table tr td {
 	background: var(--yellow);
 }
 
-span.status.pending {
-    background: rgb(231, 214, 133);
-    border-radius: 8px;
-}
 #content main .table-data .order table tr td {
 	background: var(--orange);
 }
@@ -941,11 +929,11 @@ select.form-select.form-select-sm {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: white;
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 16px 12px;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--border);
     border-radius: 0.375rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: none;
@@ -973,16 +961,17 @@ select.form-select.form-select-sm {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: white;
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 16px 12px;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--border);
     border-radius: 0.375rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+	text-align-last: initial;
 }
 table#example {
 	border-radius: 10px;
@@ -1023,7 +1012,8 @@ ul.boxx{
 	margin-top: 24px;
 }
 input.form-control {
-	/* height: 40px; */
+	height: 40px;
     margin: 0;
-	/* padding: 10px; */
+	padding: 10px;
+	text-align-last: initial ;
 }
