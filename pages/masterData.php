@@ -142,15 +142,15 @@ $thisPage = "Master Data";
 			<ul class="box-info">
                 <li>
 					<i class='bx bxs-group'></i>
-					<a class="btn" href="master_data.php"><h3>All User</h3></a>
+					<a class="btn" href="masterData.php"><h3>All User</h3></a>
 				</li>
 				<li>
 					<i class='bx bxs-user'></i>
-					<a class="btn" href="action/user_ketua.php"><h3>Ketua</h3></a>
+					<a class="btn" href="userKetua.php"><h3>Ketua</h3></a>
 				</li>
 				<li>
 					<i class='bx bxs-user'></i>
-					<a class="btn" href="action/user_pegawai.php"><h3>Pegawai</h3></a>
+					<a class="btn" href="userPegawai.php"><h3>Pegawai</h3></a>
 				</li>
 			</ul>
 			<div class="table-data">

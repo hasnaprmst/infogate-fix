@@ -13,7 +13,7 @@ if (isset($_POST['add'])){
     $db->query($query);
 
     echo '<script>alert("Data berhasil ditambahkan");</script>';
-    echo '<script>window.location.href = "../master_data.php";</script>';
+    echo '<script>window.location.href = "../masterData.php";</script>';
 }
 
 ?>

@@ -7,9 +7,9 @@ $result = $db->query ($query);
 
 if ($result) {
     echo '<script>alert("Data berhasil dihapus");</script>';
-    echo '<script>window.location.href = "../master_data.php";</script>';
+    echo '<script>window.location.href = "../masterData.php";</script>';
 } else {
     echo '<script>alert("Data gagal dihapus");</script>';
-    echo '<script>window.location.href = "../master_data.php";</script>';
+    echo '<script>window.location.href = "../masterData.php";</script>';
 }
 ?>

@@ -10,7 +10,7 @@ $login = $db->query("SELECT * FROM user WHERE username='$username'");
 
 $result = $login->fetch_object();
 
-$thisPage = "Joblist";
+$thisPage = "My Joblist";
 ?>
 
 <!DOCTYPE html>
@@ -213,7 +213,7 @@ $thisPage = "Joblist";
 					<i class='bx bxs-file'></i>
 					<a class="text" href="groupJoblist.php">
 						<center><h3>Group Job</h3></center>
-					</a>
+                    </a>
 				</li>
 				<li>
 					<i class='bx bxs-data' ></i>
@@ -231,16 +231,16 @@ $thisPage = "Joblist";
 							<div class="dropdown">
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Group</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="joblist.php">ALL GROUP</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/group/administrasi.php">ADMINISTRASI</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/group/arsip.php">ARSIP</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/binalavotas.php">BINALAVOTAS</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/binapenta&pasker.php">BINAPENTA & PASKER</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/binwasnaker&phi.php">BINWASNAKER & PHI</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/development&dwh.php">DEVELOPMENT & DWH</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/disposisi.php">DISPOSISI</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/internal.php">INTERNAL</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/project.php">PROJECT</a></li>
+									<li><a class="dropdown-item" href="myJoblist.php">ALL GROUP</a></li>
+    								<li><a class="dropdown-item" href="action/filter/group/administrasi.php">ADMINISTRASI</a></li>
+    								<li><a class="dropdown-item" href="action/filter/group/arsip.php">ARSIP</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/binalavotas.php">BINALAVOTAS</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/binapenta&pasker.php">BINAPENTA & PASKER</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/binwasnaker&phi.php">BINWASNAKER & PHI</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/development&dwh.php">DEVELOPMENT & DWH</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/disposisi.php">DISPOSISI</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/internal.php">INTERNAL</a></li>
+									<li><a class="dropdown-item" href="action/filter/group/project.php">PROJECT</a></li>
   								</ul>
   								</ul>
 								</div>
@@ -248,23 +248,23 @@ $thisPage = "Joblist";
 								<div class="dropdown">
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Status</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="joblist.php">ALL STATUS</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/status/open.php">OPEN</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/status/close.php">CLOSE</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/status/report.php">REPORT</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/status/process.php">PROCESS</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/status/sundul.php">SUNDUL</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/status/noted.php">NOTED</a></li>
+									<li><a class="dropdown-item" href="myJoblist.php">ALL STATUS</a></li>
+    								<li><a class="dropdown-item" href="action/filter/status/open.php">OPEN</a></li>
+    								<li><a class="dropdown-item" href="action/filter/status/close.php">CLOSE</a></li>
+									<li><a class="dropdown-item" href="action/filter/status/report.php">REPORT</a></li>
+									<li><a class="dropdown-item" href="action/filter/status/process.php">PROCESS</a></li>
+    								<li><a class="dropdown-item" href="action/filter/status/sundul.php">SUNDUL</a></li>
+									<li><a class="dropdown-item" href="action/filter/status/noted.php">NOTED</a></li>
 								</ul>
 								</div>
 								&nbsp;
 								<div class="dropdown">
 									<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-										<li><a class="dropdown-item" href="joblist.php">ALL CATEGORY</a></li>
-										<li><a class="dropdown-item" href="action/action/filter/category/tugas.php">TUGAS</a></li>
-										<li><a class="dropdown-item" href="action/action/filter/category/rapat.php">RAPAT</a></li>
-										<li><a class="dropdown-item" href="action/action/filter/category/dinas.php">DINAS</a></li>
+										<li><a class="dropdown-item" href="myJoblist.php">ALL CATEGORY</a></li>
+										<li><a class="dropdown-item" href="action/filter/category/tugas.php">TUGAS</a></li>
+										<li><a class="dropdown-item" href="action/filter/category/rapat.php">RAPAT</a></li>
+										<li><a class="dropdown-item" href="action/filter/category/dinas.php">DINAS</a></li>
 									</ul>
 									</ul>
 							</ul>
@@ -281,7 +281,12 @@ $thisPage = "Joblist";
 							</thead>
 							<tbody style="text-align-last: center;">
 								<?php
-								$query = "SELECT * FROM joblist";
+								$username = $_SESSION['username'];
+                                $initial = "SELECT * FROM user WHERE username='$username'";
+                                $hasil = $db->query($initial);
+                                $data = $hasil->fetch_assoc();
+
+								$query = "SELECT * FROM joblist WHERE PIC LIKE '%".$data['initial_name']."%'";
 								$result = $db->query($query);
 
 								while ($row = $result->fetch_assoc()) {
@@ -686,21 +691,19 @@ $thisPage = "Joblist";
 				</div>
 			</div>
 		</main>	
+		<?php include '../assets/inc/copyright.php';?>
 	</section>
 
 	<!-- Vendor JS Files -->
 	<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	
 	<!-- Bootstrap JS File -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script defer src="../assets/js/script.js"></script>
 	<script defer src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 	<script defer src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-
-	<!-- Multiselect JS File -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	
 	
 </body>
 </html>

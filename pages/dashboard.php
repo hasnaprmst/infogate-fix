@@ -353,7 +353,7 @@ $thisPage = "Dashboard";
 													</div>
 												</div>
 												<div class="modal-footer">
-													<!-- <button type="button" class="modal-btn-cancel" data-bs-dismiss="modal">Cancel</button> -->
+													
 													<button type="submit" class="modal-btn-add" name="save">Save</button>
 												</div>
 											</form>
@@ -480,7 +480,7 @@ $thisPage = "Dashboard";
 													</div>
 												</div>
 												<div class="modal-footer">
-													<!-- <button type="button" class="modal-btn-cancel" data-bs-dismiss="modal">Cancel</button> -->
+													
 													<button type="submit" class="modal-btn-add" name="save">Save</button>
 												</div>
 											</form>

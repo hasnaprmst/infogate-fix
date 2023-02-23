@@ -26,7 +26,7 @@
 		</li>
 		<?php if($_SESSION['role'] == 'Atasan') { ?>
 			<li <?php if($thisPage == "Master Data") echo "class='active'"; ?>>
-			<a href="master_data.php">
+			<a href="masterData.php">
 				<i class='bx bx-data'></i>
 				<span class="text">Master Data</span>
 			</a>
@@ -38,7 +38,7 @@
 				<span class="text">Log History</span>
 			</a>
 		</li>
-		<li <?php if($thisPage == "Joblist") echo "class='active'"; ?>>
+		<li <?php if($thisPage == "Joblist" || $thisPage == "Group Joblist"  || $thisPage == "My Joblist") echo "class='active'"; ?>>
 			<a href="joblist.php">
 				<i class='bx bx-task' ></i>
 				<span class="text">Joblist</span>

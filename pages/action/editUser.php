@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
     $db->query($query);
 
     echo '<script>alert("Data berhasil diubah");</script>';
-    echo '<script>window.location.href = "../master_data.php";</script>';
+    echo '<script>window.location.href = "../masterData.php";</script>';
 }
 
 ?>
