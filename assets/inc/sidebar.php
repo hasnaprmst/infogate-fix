@@ -38,7 +38,7 @@
 				<span class="text">Log History</span>
 			</a>
 		</li>
-		<li <?php if($thisPage == "Joblist" || $thisPage == "Group Joblist"  || $thisPage == "My Joblist") echo "class='active'"; ?>>
+		<li <?php if($thisPage == "Joblist" || $thisPage == "Group Joblist"  || $thisPage == "My Joblist" ) echo "class='active'"; ?>>
 			<a href="joblist.php">
 				<i class='bx bx-task' ></i>
 				<span class="text">Joblist</span>

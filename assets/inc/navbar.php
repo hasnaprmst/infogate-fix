@@ -10,17 +10,13 @@
         <i class='bx bx-menu' ></i>
         <a href="#" class="nav-link"><b>INFOGATE</b></a>
         <form action="#">
-            <div class="form-input" style="text-align: center;">
-                <input type="search" placeholder="Search...">
-                <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-            </div>
+        <div class="form-input" style="text-align: center;" hidden>
+					<button type="submit" class="search-btn">
+						<i class='bx bx-search' ></i></button>
+				</div>
         </form>
         <input type="checkbox" id="switch-mode" hidden>
         <label for="switch-mode" class="switch-mode"></label>
-        <a href="#" class="notification">
-            <i class='bx bxs-bell' ></i>
-            <span class="num"></span>
-        </a>	
         <div class="drop_down">
             <button class="drop_btn"><?php echo $result->nama_lengkap?></button>
             <div class="drop_down-content">
