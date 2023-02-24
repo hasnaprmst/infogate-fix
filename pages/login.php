@@ -22,8 +22,8 @@
             <center><h2 style="margin-top: revert;">LOGIN</h2></center>
         </div>
         <div class="login-area">
-            <input type="text" name="username" class="username" placeholder="Username">
-            <input type="password" name="password" class="password" placeholder="Password">
+            <input type="text" name="username" class="username" placeholder="Username" required>
+            <input type="password" name="password" class="password" placeholder="Password" required>
             <input type="submit" class="submit" value="Login">
             <p style="font-size:16px;">
             <small>Gerbang Informasi - Pustik Crew - H&I
