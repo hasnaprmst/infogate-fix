@@ -28,6 +28,8 @@ if ($result > 0) {
     $data=mysqli_fetch_assoc($login);
 
     $_SESSION['username'] = $username;
+    // session role = role from database
+    $_SESSION['role'] = $data['role'];
     header('Location: ../dashboard.php');
 } else {
     // redirect to login page
