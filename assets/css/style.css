@@ -154,7 +154,7 @@ body {
 .login-area {
     text-align: center;
     padding: 30px 30px 30px 30px;
-    color: var(--bluee);
+    color: var(--blue);
 }
 input.username{
 	margin: 0;
