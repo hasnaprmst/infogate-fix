@@ -26,7 +26,10 @@
             <input type="password" name="password" class="password" placeholder="Password">
             <input type="submit" class="submit" value="Login">
             <p style="font-size:16px;">
-                <small>©2021 Infogate | Gerbang Informasi - Pustik Crew</small>
+            <small>Gerbang Informasi - Pustik Crew - H&I
+                    <br>
+                    ©2023 Infogate
+            </small>
         </div>
     </form>
 
