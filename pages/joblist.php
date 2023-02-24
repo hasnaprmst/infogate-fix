@@ -233,14 +233,14 @@ $thisPage = "Joblist";
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li><a class="dropdown-item" href="joblist.php">ALL GROUP</a></li>
     								<li><a class="dropdown-item" href="../pages/action/administrasi.php">ADMINISTRASI</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/group/arsip.php">ARSIP</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/binalavotas.php">BINALAVOTAS</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/binapenta&pasker.php">BINAPENTA & PASKER</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/binwasnaker&phi.php">BINWASNAKER & PHI</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/development&dwh.php">DEVELOPMENT & DWH</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/disposisi.php">DISPOSISI</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/internal.php">INTERNAL</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/group/project.php">PROJECT</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/arsip.php">ARSIP</a></li>
+									<li><a class="dropdown-item" href="../pages/action/binalavotas.php">BINALAVOTAS</a></li>
+									<li><a class="dropdown-item" href="../pages/action/binapenta&pasker.php">BINAPENTA & PASKER</a></li>
+									<li><a class="dropdown-item" href="../pages/action/binwasnaker&phi.php">BINWASNAKER & PHI</a></li>
+									<li><a class="dropdown-item" href="../pages/action/development&dwh.php">DEVELOPMENT & DWH</a></li>
+									<li><a class="dropdown-item" href="../pages/action/disposisi.php">DISPOSISI</a></li>
+									<li><a class="dropdown-item" href="../pages/action/internal.php">INTERNAL</a></li>
+									<li><a class="dropdown-item" href="../pages/action/project.php">PROJECT</a></li>
   								</ul>
   								</ul>
 								</div>
@@ -249,12 +249,12 @@ $thisPage = "Joblist";
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Status</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li><a class="dropdown-item" href="joblist.php">ALL STATUS</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/status/open.php">OPEN</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/status/close.php">CLOSE</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/status/report.php">REPORT</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/status/process.php">PROCESS</a></li>
-    								<li><a class="dropdown-item" href="action/action/filter/status/sundul.php">SUNDUL</a></li>
-									<li><a class="dropdown-item" href="action/action/filter/status/noted.php">NOTED</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/open.php">OPEN</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/close.php">CLOSE</a></li>
+									<li><a class="dropdown-item" href="../pages/action/report.php">REPORT</a></li>
+									<li><a class="dropdown-item" href="../pages/action/process.php">PROCESS</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/sundul.php">SUNDUL</a></li>
+									<li><a class="dropdown-item" href="../pages/action/noted.php">NOTED</a></li>
 								</ul>
 								</div>
 								&nbsp;
@@ -262,9 +262,9 @@ $thisPage = "Joblist";
 									<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 										<li><a class="dropdown-item" href="joblist.php">ALL CATEGORY</a></li>
-										<li><a class="dropdown-item" href="action/action/filter/category/tugas.php">TUGAS</a></li>
-										<li><a class="dropdown-item" href="action/action/filter/category/rapat.php">RAPAT</a></li>
-										<li><a class="dropdown-item" href="action/action/filter/category/dinas.php">DINAS</a></li>
+										<li><a class="dropdown-item" href="../pages/action/tugas.php">TUGAS</a></li>
+										<li><a class="dropdown-item" href="../pages/action/rapat.php">RAPAT</a></li>
+										<li><a class="dropdown-item" href="../pages/action/dinas.php">DINAS</a></li>
 									</ul>
 									</ul>
 							</ul>

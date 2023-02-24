@@ -1,16 +1,14 @@
 <?php
 session_start();
-require_once('auth/db_login.php');
+require_once('../../pages/auth/db_login.php');
 if(!isset($_SESSION['username'])){
-    header('Location: login.php');
+    header('Location: ../../pages/login');
 }
 
 $username = $_SESSION['username'];
 $login = $db->query("SELECT * FROM user WHERE username='$username'");
 
 $result = $login->fetch_object();
-
-$thisPage = "Group Joblist";
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +17,13 @@ $thisPage = "Group Joblist";
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php echo $thisPage; ?></title>
+	<title>Joblist</title>
 
 	<!-- Vendor CSS Files -->
-	<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-	<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 	
 	<!-- Datatable CSS File -->
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
@@ -35,6 +33,8 @@ $thisPage = "Group Joblist";
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
 	
 	<!-- Bootstrap CSS File -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
@@ -45,22 +45,21 @@ $thisPage = "Group Joblist";
     referrerpolicy="no-referrer" /> 
 
 	<!-- CSS File -->
-	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../../assets/css/style.css">
 
 	<!-- IMG File -->
-	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.png">
+	<link rel="shortcut icon" type="image/png" href="../../assets/img/logo.png">
 	
 </head>
 
 <body>
 	<!-- SIDEBAR -->
-	<?php include '../assets/inc/sidebar.php';?>
-	<!-- SIDEBAR -->
+	<?php include '../../assets/inc/sidebar-filter.php';?>
 
-	<!-- CONTENT -->
-	<section id="content">
+	    <!-- CONTENT -->
+	    <section id="content">
 		<!-- NAVBAR -->
-		<?php include '../assets/inc/navbar.php';?>
+        <?php include '../../assets/inc/navbar.php';?>
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
@@ -85,7 +84,7 @@ $thisPage = "Group Joblist";
 							<h5 class="modal-title" id="exampleModalLabel">Add Joblist</h5>
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<form method="POST" action="action/addJob.php" enctype="multipart/form-data">
+						<form method="POST" action="addJob.php" enctype="multipart/form-data">
 							<div class="modal-body">
 								<div class="container-fluid">
 									<div class="row">
@@ -205,19 +204,19 @@ $thisPage = "Group Joblist";
 			<ul class="box-info">
 				<li>
 					<i class='bx bxs-file-blank' ></i>
-					<a class="text" href="myJoblist.php">
+					<a class="text" href="../myJoblist.php">
 						<center><h3>My Job</h3></center>
 					</a>
 				</li>
 				<li>
 					<i class='bx bxs-file'></i>
-					<a class="text" href="groupJoblist.php">
+					<a class="text" href="../groupJoblist.php">
 						<center><h3>Group Job</h3></center>
                     </a>
 				</li>
 				<li>
 					<i class='bx bxs-data' ></i>
-					<a class="text" href="joblist.php">
+					<a class="text" href="../joblist.php">
 						<center><h3>All Job</h3></center>
 					</a>
 				</li>
@@ -231,16 +230,16 @@ $thisPage = "Group Joblist";
 							<div class="dropdown">
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Group</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="joblist.php">ALL GROUP</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/administrasi.php">ADMINISTRASI</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/arsip.php">ARSIP</a></li>
-									<li><a class="dropdown-item" href="../pages/action/binalavotas.php">BINALAVOTAS</a></li>
-									<li><a class="dropdown-item" href="../pages/action/binapenta&pasker.php">BINAPENTA & PASKER</a></li>
-									<li><a class="dropdown-item" href="../pages/action/binwasnaker&phi.php">BINWASNAKER & PHI</a></li>
-									<li><a class="dropdown-item" href="../pages/action/development&dwh.php">DEVELOPMENT & DWH</a></li>
-									<li><a class="dropdown-item" href="../pages/action/disposisi.php">DISPOSISI</a></li>
-									<li><a class="dropdown-item" href="../pages/action/internal.php">INTERNAL</a></li>
-									<li><a class="dropdown-item" href="../pages/action/project.php">PROJECT</a></li>
+									<li><a class="dropdown-item" href="../joblist.php">ALL GROUP</a></li>
+    								<li><a class="dropdown-item" href="administrasi.php">ADMINISTRASI</a></li>
+    								<li><a class="dropdown-item" href="arsip.php">ARSIP</a></li>
+									<li><a class="dropdown-item" href="binalavotas.php">BINALAVOTAS</a></li>
+									<li><a class="dropdown-item" href="binapenta&pasker.php">BINAPENTA & PASKER</a></li>
+									<li><a class="dropdown-item" href="binwasnaker&phi.php">BINWASNAKER & PHI</a></li>
+									<li><a class="dropdown-item" href="development&dwh.php">DEVELOPMENT & DWH</a></li>
+									<li><a class="dropdown-item" href="disposisi.php">DISPOSISI</a></li>
+									<li><a class="dropdown-item" href="internal.php">INTERNAL</a></li>
+									<li><a class="dropdown-item" href="project.php">PROJECT</a></li>
   								</ul>
   								</ul>
 								</div>
@@ -248,23 +247,23 @@ $thisPage = "Group Joblist";
 								<div class="dropdown">
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Status</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="joblist.php">ALL STATUS</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/open.php">OPEN</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/close.php">CLOSE</a></li>
-									<li><a class="dropdown-item" href="../pages/action/report.php">REPORT</a></li>
-									<li><a class="dropdown-item" href="../pages/action/process.php">PROCESS</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/sundul.php">SUNDUL</a></li>
-									<li><a class="dropdown-item" href="../pages/action/noted.php">NOTED</a></li>
+									<li><a class="dropdown-item" href="../joblist.php">ALL STATUS</a></li>
+    								<li><a class="dropdown-item" href="open.php">OPEN</a></li>
+    								<li><a class="dropdown-item" href="close.php">CLOSE</a></li>
+									<li><a class="dropdown-item" href="report.php">REPORT</a></li>
+									<li><a class="dropdown-item" href="process.php">PROCESS</a></li>
+    								<li><a class="dropdown-item" href="sundul.php">SUNDUL</a></li>
+									<li><a class="dropdown-item" href="noted.php">NOTED</a></li>
 								</ul>
 								</div>
 								&nbsp;
 								<div class="dropdown">
 									<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-										<li><a class="dropdown-item" href="joblist.php">ALL CATEGORY</a></li>
-										<li><a class="dropdown-item" href="../pages/action/tugas.php">TUGAS</a></li>
-										<li><a class="dropdown-item" href="../pages/action/rapat.php">RAPAT</a></li>
-										<li><a class="dropdown-item" href="../pages/action/dinas.php">DINAS</a></li>
+										<li><a class="dropdown-item" href="../joblist.php">ALL CATEGORY</a></li>
+										<li><a class="dropdown-item" href="tugas.php">TUGAS</a></li>
+										<li><a class="dropdown-item" href="rapat.php">RAPAT</a></li>
+										<li><a class="dropdown-item" href="dinas.php">DINAS</a></li>
 									</ul>
 									</ul>
 							</ul>
@@ -281,15 +280,10 @@ $thisPage = "Group Joblist";
 							</thead>
 							<tbody style="text-align-last: center;">
 								<?php
-								$username = $_SESSION['username'];
-                                $initial = "SELECT * FROM user WHERE username='$username'";
-                                $hasil = $db->query($initial);
-                                $data = $hasil->fetch_assoc();
-
-								$query = "SELECT * FROM joblist WHERE grup LIKE '%".$data['grup1']."%' || grup LIKE '%".$data['grup2']."%'" ;
-								$result = $db->query($query);
-
-								while ($row = $result->fetch_assoc()) {
+								$query=mysqli_query($db,"SELECT * from joblist where category='rapat'");
+								$cnt=1;
+								while($row=mysqli_fetch_array($query))
+								{
 								?>
 									<tr>
 										<td><?php echo $row['id']; ?></td>
@@ -410,9 +404,8 @@ $thisPage = "Group Joblist";
 																	<div class="form-group">
 																		<label for="formFile" class="label-name">FILE REPORT</label>
 																		<?php if($row['file_report'] == ''){ ?>
-																			<!-- <input type="text" class="form-control" name="file_report" value="Tidak ada file lampiran" > -->
-																		<?php }else{ ?>
-																			<a href="../files/report/<?php echo $row['file_report']; ?>" target="_blank" class="form-control btn btn-sm">Lihat File</a>
+																				<?php }else{ ?>
+																			<a href="../../files/report/ echo $row['file_report']; ?>" target="_blank" class="form-control btn btn-sm">Lihat File</a>
 																		<?php } ?>
 																	</div>
 																</div>
@@ -435,7 +428,7 @@ $thisPage = "Group Joblist";
 														<h5 class="modal-title" id="exampleModalLabel">Edit Joblist</h5>
 														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 													</div>
-													<form method="POST" action="action/editJob.php" enctype="multipart/form-data">
+													<form method="POST" action="editJob.php" enctype="multipart/form-data">
 														<div class="modal-body">
 															<div class="container-fluid">
 																<div class="row">
@@ -562,7 +555,7 @@ $thisPage = "Group Joblist";
 														<h5 class="modal-title" id="exampleModalLabel">Edit Joblist</h5>
 														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 													</div>
-													<form method="POST" action="action/editJob.php" enctype="multipart/form-data">
+													<form method="POST" action="editJob.php" enctype="multipart/form-data">
 														<div class="modal-body">
 															<div class="container-fluid">
 																<div class="row">
@@ -679,7 +672,7 @@ $thisPage = "Group Joblist";
 												</div>
 												</div>
 											</div>
-											<a href="action/delJob.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class='bx bxs-trash' ></i></a>
+											<a href="delJob.php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class='bx bxs-trash' ></i></a>
 											<?php } ?>
 										</td>
 									</tr>
@@ -690,20 +683,21 @@ $thisPage = "Group Joblist";
 						</table> 
 				</div>
 			</div>
-			<?php include '../assets/inc/copyright.php';?>
+			<?php include '../../assets/inc/copyright.php';?>
 		</main>	
 	</section>
 
 	<!-- Vendor JS Files -->
-	<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	
 	<!-- Bootstrap JS File -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script defer src="../assets/js/script.js"></script>
+	<script defer src="../../assets/js/script.js"></script>
 	<script defer src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 	<script defer src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+	
 	
 </body>
 </html>
