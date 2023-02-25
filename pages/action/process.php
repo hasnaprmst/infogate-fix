@@ -59,7 +59,7 @@ $result = $login->fetch_object();
 	    <!-- CONTENT -->
 	    <section id="content">
 		<!-- NAVBAR -->
-        <?php include '../../assets/inc/navbar.php';?>
+        <?php include '../../assets/inc/navbar-filter.php';?>
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->

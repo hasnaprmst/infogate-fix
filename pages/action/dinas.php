@@ -59,7 +59,7 @@ $result = $login->fetch_object();
 	    <!-- CONTENT -->
 	    <section id="content">
 		<!-- NAVBAR -->
-        <?php include '../../assets/inc/navbar.php';?>
+        <?php include '../../assets/inc/navbar-filter.php';?>
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
@@ -280,7 +280,7 @@ $result = $login->fetch_object();
 							</thead>
 							<tbody style="text-align-last: center;">
 								<?php
-								$query=mysqli_query($db,"SELECT * from joblist where category='dinas'");
+								$query=mysqli_query($db,"SELECT * from joblist where kategori='dinas'");
 								$cnt=1;
 								while($row=mysqli_fetch_array($query))
 								{
