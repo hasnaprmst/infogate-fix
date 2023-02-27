@@ -40,7 +40,7 @@ if (isset($_POST['save'])){
 
         echo '<script>alert("Data berhasil diupdate");</script>';
         echo ($query);
-        // echo '<script>window.location.href = "../joblist.php";</script>';
+        echo '<script>window.location.href = "../joblist.php";</script>';
     }
     else {
         $pic = implode(', ', $_POST['PIC']);
@@ -50,7 +50,7 @@ if (isset($_POST['save'])){
         $db->query($query);
 
         echo '<script>alert("Data berhasil diupdate");</script>';
-        // echo '<script>window.location.href = "../joblist.php";</script>';
+        echo '<script>window.location.href = "../joblist.php";</script>';
     }
 }
 else {

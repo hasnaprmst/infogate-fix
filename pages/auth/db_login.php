@@ -1,6 +1,6 @@
 <?php
 $db_host = 'localhost';
-$db_database = 'infogatess';
+$db_database = 'infogate';
 $db_username = 'root';
 $db_password = '';
 

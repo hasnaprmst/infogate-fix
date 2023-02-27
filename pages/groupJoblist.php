@@ -415,6 +415,10 @@ $thisPage = "Group Joblist";
 																			<a href="../files/report/<?php echo $row['file_report']; ?>" target="_blank" class="form-control btn btn-sm">Lihat File</a>
 																		<?php } ?>
 																	</div>
+																	<div class="form-group">
+																		<label for="inputgrup" class="label-name">CATATAN LAPORAN</label>
+																		<textarea class="form-control" name="catatan" rows="3" readonly><?php echo $row['catatan']; ?></textarea>
+																	</div>
 																</div>
 																</div>
 															</div>
@@ -464,7 +468,7 @@ $thisPage = "Group Joblist";
 												
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">DESKRIPSI</label>
-																		<textarea class="form-control" name="deskripsi" rows="3" value="<?php echo $row['deskripsi']; ?>" disabled></textarea>
+																		<textarea class="form-control" name="deskripsi" rows="3" disabled><?php echo $row['deskripsi']; ?></textarea>
 																	</div>
 
 																	<div class="form-group">
@@ -538,14 +542,13 @@ $thisPage = "Group Joblist";
 
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">CATATAN LAPORAN</label>
-																		<textarea class="form-control" name="catatan" rows="3" value="<?php echo $row['catatan']; ?>"></textarea>
+																		<textarea class="form-control" name="catatan" rows="3"><?php echo $row['catatan']; ?></textarea>
 																	</div>
 																</div>
 																</div>
 															</div>
 														</div>
 														<div class="modal-footer">
-															
 															<button type="submit" class="modal-btn-add" name="save">Save</button>
 														</div>
 													</form>
@@ -591,7 +594,7 @@ $thisPage = "Group Joblist";
 												
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">DESKRIPSI</label>
-																		<textarea class="form-control" name="deskripsi" rows="3" value="<?php echo $row['deskripsi']; ?>"></textarea>
+																		<textarea class="form-control" name="deskripsi" rows="3" ><?php echo $row['deskripsi']; ?></textarea>
 																	</div>
 
 																	<div class="form-group">
@@ -665,14 +668,13 @@ $thisPage = "Group Joblist";
 
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">CATATAN LAPORAN</label>
-																		<textarea class="form-control" name="catatan" rows="3" value="<?php echo $row['catatan']; ?>"></textarea>
+																		<textarea class="form-control" name="catatan" rows="3"><?php echo $row['catatan']; ?></textarea>
 																	</div>
 																</div>
 																</div>
 															</div>
 														</div>
 														<div class="modal-footer">
-															
 															<button type="submit" class="modal-btn-add" name="save">Save</button>
 														</div>
 													</form>

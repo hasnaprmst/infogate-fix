@@ -89,8 +89,7 @@ $thisPage = "Profile";
 								</div>
 								<div class="minibox" style="width: 45%;">
 									<label for="inputgrup" class="label">Grup</label>
-									<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="
-									<?php 
+									<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="<?php 
 									if ($result->grup1 == NULL && $result->grup2 == NULL) {
 										echo "";
 									} elseif ($result->grup1 != NULL && $result->grup2 == NULL) {
@@ -143,8 +142,7 @@ $thisPage = "Profile";
 
 															<div class="form-group">
 																<label for="inputgrup" class="label-name">Grup</label>
-																<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="
-																<?php 
+																<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="<?php 
 																if ($result->grup1 == NULL && $result->grup2 == NULL) {
 																	echo "";
 																} elseif ($result->grup1 != NULL && $result->grup2 == NULL) {
