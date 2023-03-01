@@ -469,7 +469,7 @@ $result = $login->fetch_object();
 
 																			while ($pic = $hasil->fetch_assoc()) {
 																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap']; ?></option>
+																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																			<?php
 																			}
 																			?>
@@ -596,7 +596,7 @@ $result = $login->fetch_object();
 
 																			while ($pic = $hasil->fetch_assoc()) {
 																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap']; ?></option>
+																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																			<?php
 																			}
 																			?>
@@ -672,7 +672,7 @@ $result = $login->fetch_object();
 												</div>
 												</div>
 											</div>
-											<a href="delJob.php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class='bx bxs-trash' ></i></a>
+											<a href="delJob.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class='bx bxs-trash' ></i></a>
 											<?php } ?>
 										</td>
 									</tr>

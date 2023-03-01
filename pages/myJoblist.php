@@ -480,7 +480,7 @@ $thisPage = "My Joblist";
 
 																			while ($pic = $hasil->fetch_assoc()) {
 																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap']; ?></option>
+																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																			<?php
 																			}
 																			?>
@@ -606,7 +606,7 @@ $thisPage = "My Joblist";
 
 																			while ($pic = $hasil->fetch_assoc()) {
 																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap']; ?></option>
+																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																			<?php
 																			}
 																			?>

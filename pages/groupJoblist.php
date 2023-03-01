@@ -286,7 +286,7 @@ $thisPage = "Group Joblist";
                                 $hasil = $db->query($initial);
                                 $data = $hasil->fetch_assoc();
 
-								$query = "SELECT * FROM joblist WHERE grup LIKE '%".$data['grup1']."%' || grup LIKE '%".$data['grup2']."%'" ;
+								$query = "SELECT * FROM joblist WHERE grup = '$data[grup1]' OR grup = '$data[grup2]'";
 								$result = $db->query($query);
 
 								while ($row = $result->fetch_assoc()) {
@@ -480,7 +480,7 @@ $thisPage = "Group Joblist";
 
 																			while ($pic = $hasil->fetch_assoc()) {
 																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap']; ?></option>
+																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																			<?php
 																			}
 																			?>
@@ -606,7 +606,7 @@ $thisPage = "Group Joblist";
 
 																			while ($pic = $hasil->fetch_assoc()) {
 																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap']; ?></option>
+																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																			<?php
 																			}
 																			?>

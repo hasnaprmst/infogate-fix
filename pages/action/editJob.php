@@ -10,6 +10,7 @@ $kategori = $_POST['kategori'];
 $end_date = $_POST['end_date'];
 $target_time = $_POST['target_time'];
 $agenda = $_POST['agenda'];
+$catatan = $_POST['catatan'];
 
 $ekstensi_diperbolehkan = array('pdf');
 $nama = $_FILES['file']['name'];
@@ -35,18 +36,17 @@ if (isset($_POST['save'])){
         $pic = implode(', ', $_POST['PIC']);
         move_uploaded_file($file_tmp, '../../files/lampiran/'.$nama);
         move_uploaded_file($tmp, '../../files/report/'.$name);
-        $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', report_by='$data[initial_name]' WHERE judul='$judul'";
+        $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', catatan='$catatan', report_by='$data[initial_name]' WHERE judul='$judul'";
         $db->query($query);
 
         echo '<script>alert("Data berhasil diupdate");</script>';
-        echo ($query);
         echo '<script>window.location.href = "../joblist.php";</script>';
     }
     else {
         $pic = implode(', ', $_POST['PIC']);
         move_uploaded_file($file_tmp, '../../files/lampiran/'.$nama);
         move_uploaded_file($tmp, '../../files/report/'.$name);
-        $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', input_by='$data[initial_name]' WHERE judul='$judul'";
+        $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', catatan='$catatan', input_by='$data[initial_name]' WHERE judul='$judul'";
         $db->query($query);
 
         echo '<script>alert("Data berhasil diupdate");</script>';
