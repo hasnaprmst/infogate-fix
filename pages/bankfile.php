@@ -40,10 +40,6 @@ $thisPage = "Bank File";
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-	<!-- Ajax File -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous"
-    referrerpolicy="no-referrer" />  -->
-
 	<!-- CSS File -->
 	<link rel="stylesheet" href="../assets/css/style.css">
 
@@ -125,15 +121,14 @@ $thisPage = "Bank File";
 					<table id="example" class="table table-striped " style="width:100%">
 						<ul class="boxx">
 						<div class="dropdown">
-								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Status</button>
+								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">FILE</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="joblist.php">ALL STATUS</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/open.php">OPEN</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/close.php">CLOSE</a></li>
-									<li><a class="dropdown-item" href="../pages/action/report.php">REPORT</a></li>
-									<li><a class="dropdown-item" href="../pages/action/process.php">PROCESS</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/sundul.php">SUNDUL</a></li>
-									<li><a class="dropdown-item" href="../pages/action/noted.php">NOTED</a></li>
+									<li><a class="dropdown-item" href="bankfile.php">ALL FILE</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/dokumen.php">DOKUMEN</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/mou.php">MOU</a></li>
+									<li><a class="dropdown-item" href="../pages/action/paparan.php">PAPARAN</a></li>
+									<li><a class="dropdown-item" href="../pages/action/prakom.php">PRAKOM</a></li>
+    								<li><a class="dropdown-item" href="../pages/action/regulasi.php">REGULASI</a></li>
 								</ul>
 						</div>
 						</ul>
@@ -186,8 +181,6 @@ $thisPage = "Bank File";
 	<script defer src="../assets/js/script.js"></script>
 	<script defer src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 	<script defer src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	 -->
 	
 </body>
 </html>
