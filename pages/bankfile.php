@@ -83,8 +83,8 @@ $thisPage = "Bank File";
 								<div class="container-fluid">
 									<div class="row">
 										<div class="form-group">
-											<label for="inputstatus" class="label">Jenis File</label>
-											<select class="form-select" id="inputstatus" name="jenis_file" placeholder="Pilih Jenis File">
+											<label for="inputstatus" class="label-name">Jenis File</label>
+											<select class="form-select" id="inputstatus" name="jenis_file" placeholder="Pilih Jenis File" required>
 												<option selected value="">Pilih Jenis File</option>
 												<option value="dokumen">DOKUMEN</option>
 												<option value="mou">MOU</option>
@@ -96,11 +96,11 @@ $thisPage = "Bank File";
 
 										<div class="form-group">
 											<label for="inputgrup" class="label-name">Informasi File</label>
-											<textarea class="form-control" rows="3" name="informasi_file" placeholder="Masukan Informasi File"></textarea>
+											<textarea class="form-control" rows="3" name="informasi_file" placeholder="Masukan Informasi File" required></textarea>
 										</div>
 
 										<div class="form-group">
-											<label for="formFile" class="label-name">FILE LAMPIRAN</label>
+											<label for="formFile" class="label-name">File Lampiran</label>
 											<input type="file" class="form-control" name="file">
 										</div>
 									</div>
@@ -124,11 +124,11 @@ $thisPage = "Bank File";
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">FILE</button>
   								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li><a class="dropdown-item" href="bankfile.php">ALL FILE</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/dokumen.php">DOKUMEN</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/mou.php">MOU</a></li>
-									<li><a class="dropdown-item" href="../pages/action/paparan.php">PAPARAN</a></li>
-									<li><a class="dropdown-item" href="../pages/action/prakom.php">PRAKOM</a></li>
-    								<li><a class="dropdown-item" href="../pages/action/regulasi.php">REGULASI</a></li>
+    								<li><a class="dropdown-item" href="action/dokumen.php">DOKUMEN</a></li>
+                                    <li><a class="dropdown-item" href="action/mou.php">MOU</a></li>
+                                    <li><a class="dropdown-item" href="action/paparan.php">PAPARAN</a></li>
+                                    <li><a class="dropdown-item" href="action/prakom.php">PRAKOM</a></li>
+                                    <li><a class="dropdown-item" href="action/regulasi.php">REGULASI</a></li>
 								</ul>
 						</div>
 						</ul>
