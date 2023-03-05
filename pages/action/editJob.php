@@ -32,25 +32,33 @@ $query = "SELECT * FROM joblist WHERE judul='$judul'";
 $result = $db->query($query);
 
 if (isset($_POST['save'])){
-    if ($status == 'REPORT'){
-        $pic = implode(', ', $_POST['PIC']);
+    if ($_SESSION['role'] == 'Pegawai'){
         move_uploaded_file($file_tmp, '../../files/lampiran/'.$nama);
         move_uploaded_file($tmp, '../../files/report/'.$name);
-        $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', catatan='$catatan', report_by='$data[initial_name]' WHERE judul='$judul'";
+
+        $query = "UPDATE joblist SET status='$status', file_report='$name', catatan='$catatan', report_by='$data[initial_name]' WHERE judul='$judul'";
         $db->query($query);
 
         echo '<script>alert("Data berhasil diupdate");</script>';
         echo '<script>window.location.href = "../joblist.php";</script>';
-    }
-    else {
+    } else {
         $pic = implode(', ', $_POST['PIC']);
         move_uploaded_file($file_tmp, '../../files/lampiran/'.$nama);
         move_uploaded_file($tmp, '../../files/report/'.$name);
-        $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', catatan='$catatan', input_by='$data[initial_name]' WHERE judul='$judul'";
-        $db->query($query);
 
-        echo '<script>alert("Data berhasil diupdate");</script>';
-        echo '<script>window.location.href = "../joblist.php";</script>';
+        if ($status == 'REPORT'){
+            $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', catatan='$catatan', report_by='$data[initial_name]' WHERE judul='$judul'";
+            $db->query($query);
+
+            echo '<script>alert("Data berhasil diupdate");</script>';
+            echo '<script>window.location.href = "../joblist.php";</script>';
+        } else {
+            $query = "UPDATE joblist SET grup='$grup', judul='$judul', deskripsi='$deskripsi', PIC='$pic', status='$status', end_date='$end_date', target_time='$target_time', agenda='$agenda', file_lampiran='$nama', file_report='$name', catatan='$catatan', input_by='$data[initial_name]' WHERE judul='$judul'";
+            $db->query($query);
+
+            echo '<script>alert("Data berhasil diupdate");</script>';
+            echo '<script>window.location.href = "../joblist.php";</script>';
+        }
     }
 }
 else {

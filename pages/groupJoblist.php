@@ -376,6 +376,11 @@ $thisPage = "Group Joblist";
 																		<label for="inputgrup" class="label-name">STATUS</label>
 																		<input type="text" class="form-control" name="status" value="<?php echo $row['status']; ?>" readonly>
 																	</div>
+
+                                                                    <div class="form-group">
+                                                                        <label for="inputkategori" class="label-name">KATEGORI</label>
+                                                                        <input type="text" class="form-control" name="kategori" value="<?php echo $row['kategori']; ?>" readonly>
+                                                                    </div>
 																</div>
 																<div class="col-md-6">
 																	<div class="form-group">
@@ -396,11 +401,6 @@ $thisPage = "Group Joblist";
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">AGENDA</label>
 																		<input type="text" class="form-control" name="agenda" value="<?php echo $row['agenda']; ?>" readonly>
-																	</div>
-
-																	<div class="form-group">
-																		<label for="inputkategori" class="label-name">KATEGORI</label>
-																		<input type="text" class="form-control" name="kategori" value="<?php echo $row['kategori']; ?>" readonly>
 																	</div>
 
 																	<div class="form-group">
@@ -451,93 +451,61 @@ $thisPage = "Group Joblist";
 																<div class="col-md-6">
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">GRUP</label>
-																		<select class="form-select" name="grup" id="inputgrup"  disabled>
-																			<option default value="" disabled>Pilih Grup</option>
-																			<option <?= $row['grup'] == 'ADMINISTRASI' ? 'selected' : '' ?> value="ADMINISTRASI">ADMINISTRASI</option>
-																			<option <?= $row['grup'] == 'ALL GRUP' ? 'selected' : '' ?> value="ALL GRUP">ALL GRUP</option>
-																			<option <?= $row['grup'] == 'ARSIP' ? 'selected' : '' ?> value="ARSIP">ARSIP</option>
-																			<option <?= $row['grup'] == 'BINALAVOTAS' ? 'selected' : '' ?> value="BINALAVOTAS">BINALAVOTAS</option>
-																			<option <?= $row['grup'] == 'BINAPENTA & PASKER' ? 'selected' : '' ?> value="BINAPENTA & PASKER">BINAPENTA & PASKER</option>
-																			<option <?= $row['grup'] == 'BINWASKER & PHI' ? 'selected' : '' ?> value="BINWASKER & PHI">BINWASKER & PHI</option>
-																			<option <?= $row['grup'] == 'DEVELOPMENT & DWH' ? 'selected' : '' ?> value="DEVELOPMENT & DWH">DEVELOPMENT & DWH</option>
-																			<option <?= $row['grup'] == 'DISPOSISI' ? 'selected' : '' ?> value="DISPOSISI">DISPOSISI</option>
-																			<option <?= $row['grup'] == 'INTERNAL' ? 'selected' : '' ?> value="INTERNAL">INTERNAL</option>
-																			<option <?= $row['grup'] == 'PROJECT' ? 'selected' : '' ?> value="PROJECT">PROJECT</option>
-																		</select>
+																		<input type="text" class="form-control" name="grup" value="<?php echo $row['grup']; ?>" readonly>
 																	</div>
 												
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">JUDUL</label>
-																		<input type="text" class="form-control" name="judul" value="<?php echo $row['judul']; ?>" disabled>
+																		<input type="text" class="form-control" name="judul" value="<?php echo $row['judul']; ?>" readonly>
 																	</div>
 												
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">DESKRIPSI</label>
-																		<textarea class="form-control" name="deskripsi" rows="3" disabled><?php echo $row['deskripsi']; ?></textarea>
+																		<textarea class="form-control" name="deskripsi" rows="3" readonly><?php echo $row['deskripsi']; ?></textarea>
 																	</div>
 
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">PIC</label>
-																		<select id="PIC" name="PIC[]" class="selectpicker form-control" multiple aria-label="size 3 select example" placeholder="Pilih PIC" disabled>
-																			<?php
-																			$data = "SELECT * FROM user";
-																			$hasil = $db->query($data);
-
-																			while ($pic = $hasil->fetch_assoc()) {
-																			?>
-																				<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
-																			<?php
-																			}
-																			?>
-																		</select>
+																		<input type="text" class="form-control" name="PIC" value="<?php echo $row['PIC']; ?>" readonly>
 																	</div>
 
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">STATUS</label>
 																		<select class="form-select" name="status" id="status">
 																			<option default disabled>Pilih Status</option>
-																			<option <?= $row['status'] == 'OPEN' ? 'selected' : '' ?> value="OPEN">OPEN</option>
-																			<option <?= $row['status'] == 'PROCESS' ? 'selected' : '' ?> value="PROCESS">PROCESS</option>
+																			<option <?= $row['status'] == 'OPEN' ? 'selected' : '' ?> value="OPEN" disabled>OPEN</option>
+																			<option <?= $row['status'] == 'PROCESS' ? 'selected' : '' ?> value="PROCESS" disabled>PROCESS</option>
 																			<option <?= $row['status'] == 'REPORT' ? 'selected' : '' ?> value="REPORT">REPORT</option>
-																			<option <?= $row['status'] == 'CLOSE' ? 'selected' : '' ?> value="CLOSE">CLOSE</option>
-																			<option <?= $row['status'] == 'SUNDUL' ? 'selected' : '' ?> value="SUNDUL">SUNDUL</option>
-																			<option <?= $row['status'] == 'NOTED' ? 'selected' : '' ?> value="NOTED">NOTED</option>
+																			<option <?= $row['status'] == 'CLOSE' ? 'selected' : '' ?> value="CLOSE" disabled>CLOSE</option>
+																			<option <?= $row['status'] == 'SUNDUL' ? 'selected' : '' ?> value="SUNDUL" disabled>SUNDUL</option>
+																			<option <?= $row['status'] == 'NOTED' ? 'selected' : '' ?> value="NOTED" disabled>NOTED</option>
 																		</select>
 																	</div>
 
 																	<div class="form-group">
-																		<label for="inputgrup" class="label-name">Kategori</label>
-																		<select class="form-select" name="kategori" placeholder="Pilih Kategori" disabled>
-																			<option selected value="">Pilih Kategori</option>
-																			<option <?= $row['kategori'] == 'TUGAS' ? 'selected' : '' ?> value="TUGAS">TUGAS</option>
-																			<option <?= $row['kategori'] == 'RAPAT' ? 'selected' : '' ?> value="RAPAT">RAPAT</option>
-																			<option <?= $row['kategori'] == 'DINAS' ? 'selected' : '' ?> value="DINAS">DINAS</option>
-																		</select>
+																		<label for="inputkategori" class="label-name">KATEGORI</label>
+																		<input type="text" class="form-control" name="kategori" value="<?php echo $row['kategori']; ?>" readonly>
 																	</div>
 																</div>
 																<div class="col-md-6">
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">END DATE</label>
-																		<input type="date" class="form-control" name="end_date" value="<?php echo $row['end_date']; ?>" disabled>
+																		<input type="date" class="form-control" name="end_date" value="<?php echo $row['end_date']; ?>" readonly>
 																	</div>
 																	
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">TARGET TIME</label>
-																		<input type="time" class="form-control" name="target_time" value="<?php echo $row['target_time']; ?>" disabled>
+																		<input type="time" class="form-control" name="target_time" value="<?php echo $row['target_time']; ?>" readonly>
 																	</div>
 												
 																	<div class="form-group">
 																		<label for="inputgrup" class="label-name">AGENDA</label>
-																		<select class="form-select" name="agenda" id="inputagenda" disabled>
-																			<option default>Pilih Agenda</option>
-																			<option <?= $row['agenda'] == 'AGENDA' ? 'selected' : '' ?> value="AGENDA">AGENDA</option>
-																			<option <?= $row['agenda'] == 'NON AGENDA' ? 'selected' : '' ?> value="NON AGENDA">NON AGENDA</option>
-																		</select>
+																		<input type="text" class="form-control" name="agenda" value="<?php echo $row['agenda']; ?>" readonly>
 																	</div>
 
 																	<div class="form-group">
 																		<label for="formFile" class="label-name">FILE LAMPIRAN</label>
-																		<input type="file" class="form-control" name="file">
+																		<input type="file" class="form-control" name="file" readonly>
 																	</div>
 
 																	<div class="form-group">
