@@ -76,19 +76,19 @@ $thisPage = "Profile";
 						<form method="POST" action="action/editProfile.php">
 							<div class="mini-box">
 								<div class="minibox" style="width: 45%;">
-									<label for="inputnama" class="label">Username</label>
+									<label for="inputnama" class="label-name">USERNAME</label>
 									<input type="text" class="form-control" value="<?= $result->username ?>" disabled>
 								</div>
 								<div class="minibox" style="width: 45%;">
-									<label for="inputrole" class="label">Role</label>
+									<label for="inputrole" class="label-name">ROLE</label>
 									<input type="text" class="form-control" value="<?= $result->role ?>" disabled>
 								</div>
 								<div class="minibox" style="width: 45%;">
-									<label for="inputpass" class="label">Password</label>
+									<label for="inputpass" class="label-name">PASSWORD</label>
 									<input type="text" class="form-control" name="password" value="<?= $result->password ?>" disabled>
 								</div>
 								<div class="minibox" style="width: 45%;">
-									<label for="inputgrup" class="label">Grup</label>
+									<label for="inputgrup" class="label-name">GRUP</label>
 									<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="<?php 
 									if ($result->grup1 == NULL && $result->grup2 == NULL) {
 										echo "";
@@ -102,7 +102,7 @@ $thisPage = "Profile";
 									?>" disabled>
 								</div>
 								<div class="minibox" style="width: 45%;">
-									<label for="inputinisial" class="label">Inisial</label>
+									<label for="inputinisial" class="label-name">INISIAL</label>
 									<input type="text" class="form-control" id="inputinisial" placeholder="Masukan Inisial" style="text-transform: uppercase;" value="<?= $result->initial_name ?>" disabled>
 								</div>
 								<div class="profile-btn">
@@ -121,27 +121,27 @@ $thisPage = "Profile";
 													<div class="form-row">
 														<div class="col">
 															<div class="form-group">
-																<label for="inputnama" class="label-name">Username</label>
+																<label for="inputnama" class="label-name">USERNAME</label>
 																<input type="text" class="form-control" name="username" id="inputnama" value="<?= $result->username ?>" disabled>
 															</div>
 									
 															<div class="form-group">
-																<label for="inputpass" class="label-name">Password</label>
+																<label for="inputpass" class="label-name">PASSWORD</label>
 																<input type="text" class="form-control" name="password" placeholder="Masukan Password" value="<?= $result->password ?>">
 															</div>
 
 															<div class="form-group">
-																<label for="inputinisial" class="label-name">Inisial</label>
+																<label for="inputinisial" class="label-name">INISIAL</label>
 																<input type="text" class="form-control" name="initial_name" id="inputinisial" placeholder="Masukan Inisial" style="text-transform: uppercase;" value="<?= $result->initial_name ?>">
 															</div>
 										
 															<div class="form-group">
-																<label for="inputrole" class="label-name">Role</label>
+																<label for="inputrole" class="label-name">ROLE</label>
 																<input type="text" class="form-control" name="role" id="inputrole" value="<?= $result->role ?>" disabled>
 															</div>
 
 															<div class="form-group">
-																<label for="inputgrup" class="label-name">Grup</label>
+																<label for="inputgrup" class="label-name">GRUP</label>
 																<input type="text" class="form-control" id="inputgrup" placeholder="Masukan Grup" value="<?php 
 																if ($result->grup1 == NULL && $result->grup2 == NULL) {
 																	echo "";

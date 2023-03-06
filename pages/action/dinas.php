@@ -148,7 +148,7 @@ $result = $login->fetch_object();
 										</div>
 
 										<div class="form-group">
-											<label for="inputgrup" class="label-name">Kategori</label>
+											<label for="inputgrup" class="label-name">KATEGORI</label>
 											<select class="form-select" name="kategori" placeholder="Pilih Kategori" required>
 												<option selected value="">Pilih Kategori</option>
 												<option value="TUGAS">TUGAS</option>
@@ -275,7 +275,7 @@ $result = $login->fetch_object();
 									<th>TARGET TIME</th>
 									<th>CATEGORY</th>
 									<th>PIC</th>
-									<th>Action</th>
+									<th>ACTION</th>
 								</tr>
 							</thead>
 							<tbody style="text-align-last: center;">
@@ -594,7 +594,7 @@ $result = $login->fetch_object();
 																	</div>
 
 																	<div class="form-group">
-																		<label for="inputgrup" class="label-name">Kategori</label>
+																		<label for="inputgrup" class="label-name">KATEGORI</label>
 																		<select class="form-select" name="kategori" placeholder="Pilih Kategori">
 																			<option selected value="">Pilih Kategori</option>
 																			<option <?= $row['kategori'] == 'TUGAS' ? 'selected' : '' ?> value="TUGAS">TUGAS</option>
@@ -721,7 +721,7 @@ $result = $login->fetch_object();
 																	</div>
 
 																	<div class="form-group">
-																		<label for="inputgrup" class="label-name">Kategori</label>
+																		<label for="inputgrup" class="label-name">KATEGORI</label>
 																		<select class="form-select" name="kategori" placeholder="Pilih Kategori">
 																			<option selected value="">Pilih Kategori</option>
 																			<option <?= $row['kategori'] == 'TUGAS' ? 'selected' : '' ?> value="TUGAS">TUGAS</option>

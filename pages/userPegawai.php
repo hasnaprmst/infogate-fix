@@ -84,12 +84,12 @@ $thisPage = "Master Data";
                                 <div class="form-row">
                                     <div class="col">
                                         <div class="form-group">
-                                            <label for="inputnama" class="label">Nama Lengkap</label>
+                                            <label for="inputnama" class="label-name">NAMA LENGKAP</label>
                                             <input type="text" class="form-control" name="nama_lengkap" id="inputnama" placeholder="Masukan Nama Lengkap">
                                         </div>
                     
                                         <div class="form-group">
-                                            <label for="inputrole" class="label-name">Role</label>
+                                            <label for="inputrole" class="label-name">ROLE</label>
                                             <select class="form-select" id="inputrole" name="role" placeholder="Pilih Role">
                                                 <option selected value="">Pilih Role</option>
                                                 <option value="Pegawai">Pegawai</option>
@@ -99,7 +99,7 @@ $thisPage = "Master Data";
                                         </div>
                 
                                         <div class="form-group">
-                                            <label for="inputusername" class="label">Username</label>
+                                            <label for="inputusername" class="label-name">USERNAME</label>
                                             <input type="text" class="form-control" id="inputusername" name="username" placeholder="Masukan Username">
                                         </div>
                                     </div>
@@ -133,12 +133,12 @@ $thisPage = "Master Data";
 					<table id="example" class="table table-striped " style="width:100%">
 						<thead style="text-align:center;">
 							<tr>
-								<th>No</th>
-								<th>Nama Lengkap</th>
-								<th>Status</th>
-								<th>Username</th>
-								<th>Inisial</th>
-								<th>Action</th>
+								<th>NO</th>
+								<th>NAMA LENGKAP</th>
+								<th>STATUS</th>
+								<th>USERNAME</th>
+								<th>INISIAL</th>
+								<th>ACTION</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -173,12 +173,12 @@ $thisPage = "Master Data";
 														<div class="form-row">
 															<div class="col">
 																<div class="form-group">
-																	<label for="inputnama" class="label-name">Nama Lengkap</label>
+																	<label for="inputnama" class="label-name">NAMA LENGKAP</label>
 																	<input type="text" class="form-control" name="nama_lengkap" id="inputnama" value="<?php echo $row['nama_lengkap']; ?>">
 																</div>
 											
 																<div class="form-group">
-																	<label for="inputrole" class="label-name">Role</label>
+																	<label for="inputrole" class="label-name">ROLE</label>
 																	<select class="form-select" id="inputrole" name="role">
 																		<option default>Pilih Role</option>
 																		<option <?= ($row['role'] == 'Pegawai') ? 'selected' : '' ?> value="Pegawai">Pegawai</option>
@@ -188,7 +188,7 @@ $thisPage = "Master Data";
 																</div>
 										
 																<div class="form-group">
-																	<label for="inputusername" class="label-name">Username</label>
+																	<label for="inputusername" class="label-name">USERNAME</label>
 																	<input type="text" class="form-control" id="inputusername" name="username" readonly value="<?php echo $row['username']; ?>">
 																</div>
 															</div>

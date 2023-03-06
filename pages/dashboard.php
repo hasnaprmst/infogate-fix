@@ -95,7 +95,7 @@ $thisPage = "Dashboard";
 										<th>JOBLIST</th>
 										<th>END DATE/STATUS</th>
 										<th>PIC</th>
-										<th>Action</th>
+										<th>ACTION</th>
 									</tr>
 						</thead>
 						<tbody>
@@ -407,7 +407,7 @@ $thisPage = "Dashboard";
 															</div>
 
 															<div class="form-group">
-																<label for="inputgrup" class="label-name">Kategori</label>
+																<label for="inputgrup" class="label-name">KATEGORI</label>
 																<select class="form-select" name="kategori" placeholder="Pilih Kategori">
 																	<option selected value="">Pilih Kategori</option>
 																	<option <?= $row['kategori'] == 'TUGAS' ? 'selected' : '' ?> value="TUGAS">TUGAS</option>
@@ -534,7 +534,7 @@ $thisPage = "Dashboard";
 															</div>
 
 															<div class="form-group">
-																<label for="inputgrup" class="label-name">Kategori</label>
+																<label for="inputgrup" class="label-name">KATEGORI</label>
 																<select class="form-select" name="kategori" placeholder="Pilih Kategori">
 																	<option selected value="">Pilih Kategori</option>
 																	<option <?= $row['kategori'] == 'TUGAS' ? 'selected' : '' ?> value="TUGAS">TUGAS</option>

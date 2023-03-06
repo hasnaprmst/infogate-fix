@@ -1016,6 +1016,7 @@ input.form-control {
     margin: 0;
 	padding: 10px;
 	text-align-last: initial ;
+	margin-bottom: 10px;
 }
 .fc-unthemed td.fc-today {
     background:var(--blue);

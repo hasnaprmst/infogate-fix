@@ -70,10 +70,10 @@ $thisPage = "Log History";
 						<table id="example" class="table table-striped " style="width:100%">
 							<thead style="text-align:center;">
 										<tr>
-											<th>No.</th>
-											<th>Username</th>
-											<th>Ip Address</th>
-											<th>Login Time</th>
+											<th>NO</th>
+											<th>USERNAME</th>
+											<th>IP ADDRESS</th>
+											<th>LOGIN TIME</th>
 										</tr>
 							</thead>
 							<tbody>
