@@ -17,13 +17,17 @@ $result = mysqli_num_rows($login);
 
 // if user data is more than 0, then login is success
 if ($result > 0) {
+
+    $query = "SELECT * FROM user WHERE username='$username'";
+    $hasil = $db->query($query);
+    $user = $hasil->fetch_assoc();
     
-    $_SESSION['user']=$username; 
-    $_SESSION['id']=$result['id']; // hold the user id in session
+    $_SESSION['user'] = $username;
+    $nama = $user['nama_lengkap'];
     $machineName = gethostname();   //for get current system name 
     $uip = gethostbyname($machineName); //For get ipaddress
 
-    $query = "INSERT INTO `user_log`(username,userId,user_ip) values('".$_SESSION['user']."','".$_SESSION['id']."','$uip')";
+    $query = "INSERT INTO `user_log`(username, nama_lengkap, user_ip) values('".$_SESSION['user']."', '$nama', '$uip')";
     $db->query($query);
     $data=mysqli_fetch_assoc($login);
 

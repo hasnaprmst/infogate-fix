@@ -71,6 +71,7 @@ $thisPage = "Log History";
 							<thead style="text-align:center;">
 										<tr>
 											<th>NO</th>
+											<th>NAMA LENGKAP</th>
 											<th>USERNAME</th>
 											<th>IP ADDRESS</th>
 											<th>LOGIN TIME</th>
@@ -86,6 +87,7 @@ $thisPage = "Log History";
 									?>
 									<tr>
 									<td><?php echo $no;?></td>
+                                    <td><?php echo $row['nama_lengkap'];?></td>
                                     <td><?php echo $row['username'];?></td>
                                     <td><?php echo $row['user_ip'];?></td>
                                     <td><?php echo $row['login_time'];?></td>

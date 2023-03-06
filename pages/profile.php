@@ -168,6 +168,7 @@ $thisPage = "Profile";
 						</form>
            			</div>
 				</div>
+				</div>
 				<?php include '../assets/inc/copyright.php';?>	
 			</main>	
 	</section>
