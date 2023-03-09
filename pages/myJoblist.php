@@ -138,13 +138,15 @@ $thisPage = "My Joblist";
 										<div class="form-group">
 											<label for="inputgrup" class="label-name">STATUS</label>
 											<select class="form-select" name="status" placeholder="Pilih Status" required>
-												<!-- <option selected value="">Pilih Status</option> -->
+												<option value="">Pilih Status</option>
 												<option value="OPEN" selected>OPEN</option>
 												<option value="PROCESS">PROCESS</option>
 												<option value="REPORT">REPORT</option>
 												<option value="CLOSE">CLOSE</option>
 												<option value="SUNDUL">SUNDUL</option>
-												<option value="NOTED">NOTED</option>
+												<option value="USULAN">USULAN</option>
+												<option value="INFORMASI">INFORMASI</option>
+												<option value="MONITOR">MONITOR</option>
 											</select>
 										</div>
 
@@ -478,7 +480,9 @@ $thisPage = "My Joblist";
 																			<option <?= $row['status'] == 'REPORT' ? 'selected' : '' ?> value="REPORT">REPORT</option>
 																			<option <?= $row['status'] == 'CLOSE' ? 'selected' : '' ?> value="CLOSE" disabled>CLOSE</option>
 																			<option <?= $row['status'] == 'SUNDUL' ? 'selected' : '' ?> value="SUNDUL" disabled>SUNDUL</option>
-																			<option <?= $row['status'] == 'NOTED' ? 'selected' : '' ?> value="NOTED" disabled>NOTED</option>
+																			<option <?= $row['status'] == 'USULAN' ? 'selected' : '' ?> value="USULAN" disabled>USULAN</option>
+																			<option <?= $row['status'] == 'INFORMASI' ? 'selected' : '' ?> value="INFORMASI" disabled>INFORMASI</option>
+																			<option <?= $row['status'] == 'MONITOR' ? 'selected' : '' ?> value="MONITOR" disabled>MONITOR</option>
 																		</select>
 																	</div>
 
@@ -595,7 +599,9 @@ $thisPage = "My Joblist";
 																	<option <?= $row['status'] == 'REPORT' ? 'selected' : '' ?> value="REPORT">REPORT</option>
 																	<option <?= $row['status'] == 'CLOSE' ? 'selected' : '' ?> value="CLOSE">CLOSE</option>
 																	<option <?= $row['status'] == 'SUNDUL' ? 'selected' : '' ?> value="SUNDUL" disabled>SUNDUL</option>
-																	<option <?= $row['status'] == 'NOTED' ? 'selected' : '' ?> value="NOTED" disabled>NOTED</option>
+																	<option <?= $row['status'] == 'USULAN' ? 'selected' : '' ?> value="USULAN" disabled>USULAN</option>
+																	<option <?= $row['status'] == 'INFORMASI' ? 'selected' : '' ?> value="INFORMASI" disabled>INFORMASI</option>
+																	<option <?= $row['status'] == 'MONITOR' ? 'selected' : '' ?> value="MONITOR" disabled>MONITOR</option>
 																</select>
 															</div>
 
@@ -722,7 +728,9 @@ $thisPage = "My Joblist";
 																			<option <?= $row['status'] == 'REPORT' ? 'selected' : '' ?> value="REPORT">REPORT</option>
 																			<option <?= $row['status'] == 'CLOSE' ? 'selected' : '' ?> value="CLOSE">CLOSE</option>
 																			<option <?= $row['status'] == 'SUNDUL' ? 'selected' : '' ?> value="SUNDUL">SUNDUL</option>
-																			<option <?= $row['status'] == 'NOTED' ? 'selected' : '' ?> value="NOTED">NOTED</option>
+																			<option <?= $row['status'] == 'USULAN' ? 'selected' : '' ?> value="USULAN">USULAN</option>
+																			<option <?= $row['status'] == 'INFORMASI' ? 'selected' : '' ?> value="INFORMASI">INFORMASI</option>
+																			<option <?= $row['status'] == 'MONITOR' ? 'selected' : '' ?> value="MONITOR">MONITOR</option>
 																		</select>
 																	</div>
 
