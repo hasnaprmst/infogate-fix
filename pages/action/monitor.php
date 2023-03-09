@@ -284,7 +284,7 @@ $result = $login->fetch_object();
 							</thead>
 							<tbody style="text-align-last: center;">
 								<?php
-								$query=mysqli_query($db,"SELECT * from joblist where status='open'");
+								$query=mysqli_query($db,"SELECT * from joblist where status='monitor'");
 								$cnt=1;
 								while($row=mysqli_fetch_array($query))
 								{

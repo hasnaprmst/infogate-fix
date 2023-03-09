@@ -255,7 +255,9 @@ $result = $login->fetch_object();
 									<li><a class="dropdown-item" href="report.php">REPORT</a></li>
 									<li><a class="dropdown-item" href="process.php">PROCESS</a></li>
     								<li><a class="dropdown-item" href="sundul.php">SUNDUL</a></li>
-									<li><a class="dropdown-item" href="noted.php">NOTED</a></li>
+									<li><a class="dropdown-item" href="usulan.php">USULAN</a></li>
+									<li><a class="dropdown-item" href="monitor.php">MONITOR</a></li>
+									<li><a class="dropdown-item" href="informasi.php">INFORMASI</a></li>
 								</ul>
 								</div>
 								&nbsp;
@@ -315,8 +317,12 @@ $result = $login->fetch_object();
 												echo '<span class="badge bg-primary">PROCESS</span>';
 											} elseif ($row['status'] == 'SUNDUL') {
 												echo '<span class="badge bg-secondary">SUNDUL</span>';
-											} elseif ($row['status'] == 'NOTED') {
-												echo '<span class="badge bg-info">NOTED</span>';
+											} elseif ($row['status'] == 'USULAN') {
+												echo '<span class="badge bg-info">USULAN</span>';
+											} elseif ($row['status'] == 'INFORMASI') {
+												echo '<span class="badge bg-light text-dark">INFORMASI</span>';
+											} elseif ($row['status'] == 'MONITOR') {
+												echo '<span class="badge bg-dark text-white">MONITOR</span>';
 											}
 											?>
 										</td>
