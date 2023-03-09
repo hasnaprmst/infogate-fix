@@ -249,14 +249,16 @@ $thisPage = "Group Joblist";
 								&nbsp;
 								<div class="dropdown">
 								<button class="btn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Status</button>
-  								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li><a class="dropdown-item" href="joblist.php">ALL STATUS</a></li>
     								<li><a class="dropdown-item" href="../pages/action/open.php">OPEN</a></li>
     								<li><a class="dropdown-item" href="../pages/action/close.php">CLOSE</a></li>
 									<li><a class="dropdown-item" href="../pages/action/report.php">REPORT</a></li>
 									<li><a class="dropdown-item" href="../pages/action/process.php">PROCESS</a></li>
     								<li><a class="dropdown-item" href="../pages/action/sundul.php">SUNDUL</a></li>
-									<li><a class="dropdown-item" href="../pages/action/noted.php">NOTED</a></li>
+									<li><a class="dropdown-item" href="../pages/action/usulan.php">USULAN</a></li>
+									<li><a class="dropdown-item" href="../pages/action/informasi.php">INFORMASI</a></li>
+									<li><a class="dropdown-item" href="../pages/action/monitor.php">MONITOR</a></li>
 								</ul>
 								</div>
 								&nbsp;

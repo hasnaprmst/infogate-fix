@@ -127,20 +127,24 @@ $thisPage = "Dashboard";
 								<td>
 									<div><?php echo $row['end_date']; ?><div>
 									<?php
-									if ($row['status'] == 'OPEN') {
-										echo '<span class="badge bg-success" >OPEN</span>';
-									} elseif ($row['status'] == 'REPORT') {
-										echo '<span class="badge bg-warning">REPORT</span>';
-									} elseif ($row['status'] == 'CLOSE') {
-										echo '<span class="badge bg-danger">CLOSE</span>';
-									} elseif ($row['status'] == 'PROCESS') {
-										echo '<span class="badge bg-primary">CLOSE</span>';
-									} elseif ($row['status'] == 'SUNDUL') {
-										echo '<span class="badge bg-secondary">CLOSE</span>';
-									} elseif ($row['status'] == 'NOTED') {
-										echo '<span class="badge bg-info">CLOSE</span>';
-									}
-									?>
+											if ($row['status'] == 'OPEN') {
+												echo '<span class="badge bg-success" >OPEN</span>';
+											} elseif ($row['status'] == 'REPORT') {
+												echo '<span class="badge bg-warning">REPORT</span>';
+											} elseif ($row['status'] == 'CLOSE') {
+												echo '<span class="badge bg-danger">CLOSE</span>';
+											} elseif ($row['status'] == 'PROCESS') {
+												echo '<span class="badge bg-primary">PROCESS</span>';
+											} elseif ($row['status'] == 'SUNDUL') {
+												echo '<span class="badge bg-secondary">SUNDUL</span>';
+											} elseif ($row['status'] == 'USULAN') {
+												echo '<span class="badge bg-info">USULAN</span>';
+											} elseif ($row['status'] == 'INFORMASI') {
+												echo '<span class="badge bg-light text-dark">INFORMASI</span>';
+											} elseif ($row['status'] == 'MONITOR') {
+												echo '<span class="badge bg-dark text-white">MONITOR</span>';
+											}
+											?>
 								</td>
 								<td><?php echo $row['PIC']; ?></td>
 								<td>
