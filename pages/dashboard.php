@@ -94,6 +94,8 @@ $thisPage = "Dashboard";
 										<th>JOB</th>
 										<th>JOBLIST</th>
 										<th>END DATE/STATUS</th>
+										<th>TARGET TIME</th>
+										<th>CATEGORY</th>
 										<th>PIC</th>
 										<th>ACTION</th>
 									</tr>
@@ -123,28 +125,48 @@ $thisPage = "Dashboard";
 									<div class="badge bg-secondary text-uppercase"><?php echo $row['grup']; ?></div>
 									<div><?php echo $row['judul']; ?><div>
 									<div><p>Input By : <?php echo $row['input_by']; ?></p></div>
+									<div><p>
+										<?php
+										if ($row['report_by'] != '') {
+											echo '<p>Report By : ' . $row['report_by'] . '</p>';
+										}
+										?>
+									</p>
+									</div>
 								</td>
 								<td>
 									<div><?php echo $row['end_date']; ?><div>
 									<?php
-											if ($row['status'] == 'OPEN') {
-												echo '<span class="badge bg-success" >OPEN</span>';
-											} elseif ($row['status'] == 'REPORT') {
-												echo '<span class="badge bg-warning">REPORT</span>';
-											} elseif ($row['status'] == 'CLOSE') {
-												echo '<span class="badge bg-danger">CLOSE</span>';
-											} elseif ($row['status'] == 'PROCESS') {
-												echo '<span class="badge bg-primary">PROCESS</span>';
-											} elseif ($row['status'] == 'SUNDUL') {
-												echo '<span class="badge bg-secondary">SUNDUL</span>';
-											} elseif ($row['status'] == 'USULAN') {
-												echo '<span class="badge bg-info">USULAN</span>';
-											} elseif ($row['status'] == 'INFORMASI') {
-												echo '<span class="badge bg-light text-dark">INFORMASI</span>';
-											} elseif ($row['status'] == 'MONITOR') {
-												echo '<span class="badge bg-dark text-white">MONITOR</span>';
-											}
-											?>
+									if ($row['status'] == 'OPEN') {
+										echo '<span class="badge bg-success" >OPEN</span>';
+									} elseif ($row['status'] == 'REPORT') {
+										echo '<span class="badge bg-warning">REPORT</span>';
+									} elseif ($row['status'] == 'CLOSE') {
+										echo '<span class="badge bg-danger">CLOSE</span>';
+									} elseif ($row['status'] == 'PROCESS') {
+										echo '<span class="badge bg-primary">PROCESS</span>';
+									} elseif ($row['status'] == 'SUNDUL') {
+										echo '<span class="badge bg-secondary">SUNDUL</span>';
+									} elseif ($row['status'] == 'USULAN') {
+										echo '<span class="badge bg-info">USULAN</span>';
+									} elseif ($row['status'] == 'INFORMASI') {
+										echo '<span class="badge bg-light text-dark">INFORMASI</span>';
+									} elseif ($row['status'] == 'MONITOR') {
+										echo '<span class="badge bg-dark text-white">MONITOR</span>';
+									}
+									?>
+								</td>
+								<td><?php echo $row['target_time']; ?></td>
+								<td>
+									<?php
+									if ($row['kategori'] == 'TUGAS') {
+										echo '<span class="badge rounded-pill bg-success" >TUGAS</span>';
+									} elseif ($row['kategori'] == 'RAPAT') {
+										echo '<span class="badge rounded-pill bg-danger">RAPAT</span>';
+									} elseif ($row['kategori'] == 'DINAS') {
+										echo '<span class="badge rounded-pill bg-warning">DINAS</span>';
+									}
+									?>
 								</td>
 								<td><?php echo $row['PIC']; ?></td>
 								<td>
