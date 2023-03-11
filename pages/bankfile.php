@@ -153,7 +153,7 @@ $thisPage = "Bank File";
 									<td>
 										<div class="boxfile">
 											<b class="badge bg-secondary text-uppercase"><?php echo $row['jenis_file']; ?></b>
-											<span><?php echo $row['input_by']; ?></span><span> | </span>
+											<span><?php echo strtoupper($row['input_by']);?></span><span> | </span>
 											<span><?php echo $row['time']; ?></span>
 										</div>	
 										<?php echo $row['informasi_file']; ?>
