@@ -193,7 +193,7 @@ $thisPage = "Master Data";
 									<td><?php echo $row['nama_lengkap']; ?></td>
 									<td><?php echo $row['role']; ?></td>
 									<td><?php echo $row['username']; ?></td>
-									<td><?php echo $row['initial_name']; ?></td>
+									<td><?php echo strtoupper($row['initial_name']); ?></td>
 									<td>
 										<a href="" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id']; ?>"><i class='bx bxs-edit' ></i></a>
 										<a href="action/delUser.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class='bx bxs-trash' ></i></a>
