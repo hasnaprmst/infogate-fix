@@ -124,11 +124,11 @@ $thisPage = "Dashboard";
 								<td>
 									<div class="badge bg-secondary text-uppercase"><?php echo $row['grup']; ?></div>
 									<div><?php echo $row['judul']; ?><div>
-									<div><p>Input By : <?php echo $row['input_by']; ?></p></div>
+									<div><p>Input By : <?php echo strtoupper( $row['input_by']); ?></p></div>
 									<div><p>
 										<?php
 										if ($row['report_by'] != '') {
-											echo '<p>Report By : ' . $row['report_by'] . '</p>';
+											echo strtoupper( '<p>Report By : ' . $row['report_by'] . '</p>');
 										}
 										?>
 									</p>
@@ -168,7 +168,7 @@ $thisPage = "Dashboard";
 									}
 									?>
 								</td>
-								<td><?php echo $row['PIC']; ?></td>
+								<td><?php echo strtoupper( $row['PIC']); ?></td>
 								<td>
 									<a href="" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#infoModal<?php echo $row['id']; ?>"><i class='bx bxs-info-square' ></i></a>
 									<!-- Info Modal -->
