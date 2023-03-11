@@ -298,7 +298,7 @@ $thisPage = "Dashboard";
 
 															<div class="form-group">
 																<label for="inputgrup" class="label-name">PIC</label>
-																<input type="text" class="form-control" name="PIC" value="<?php echo $row['PIC']; ?>" readonly>
+																<input type="text" class="form-control" name="PIC" value="<?php echo strtoupper( $row['PIC']); ?>" readonly>
 															</div>
 
 															<div class="form-group">
@@ -414,7 +414,7 @@ $thisPage = "Dashboard";
 
 																	while ($pic = $hasil->fetch_assoc()) {
 																	?>
-																		<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
+																		<option value="<?php echo strtoupper( $pic['initial_name']); ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																	<?php
 																	}
 																	?>
@@ -543,7 +543,7 @@ $thisPage = "Dashboard";
 
 																	while ($pic = $hasil->fetch_assoc()) {
 																	?>
-																		<option value="<?php echo $pic['initial_name']; ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
+																		<option value="<?php echo strtoupper( $pic['initial_name']); ?>"><?php echo $pic['nama_lengkap'] . ", " . $pic['initial_name']; ?></option>
 																	<?php
 																	}
 																	?>

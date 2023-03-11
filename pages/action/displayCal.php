@@ -11,7 +11,7 @@ if($count>0)
 	{	
 	$data_arr[$i]['id'] = $data_row['id'];
 	$data_arr[$i]['title'] = $data_row['kategori'] . '
-	' . $data_row['PIC'];
+	' . strtoupper($data_row['PIC']);
 	$data_arr[$i]['start'] = date("Y-m-d", strtotime($data_row['start_date']));
 	$data_arr[$i]['end'] = date("Y-m-d", strtotime($data_row['end_date']));
 	if($data_row['kategori'] == 'DINAS')
